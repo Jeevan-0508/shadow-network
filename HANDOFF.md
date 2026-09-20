@@ -52,27 +52,25 @@ applied, and exactly 24 lane rows rendered, matching `laneCount: 24`). Ran a loc
 `localhost:8934` serving `docs/` to do this, then killed that background task once done; it is not part
 of the shipped repo.
 
-**Not yet verified**: whether the actual GitHub Pages deployment (as opposed to the local file content)
-serves correctly. Do this immediately after pushing: GitHub Pages builds typically take under a minute;
-poll `GET /repos/Jeevan-0508/shadow-network/pages/builds/latest` once, then `curl` the live URL and grep
-for a real data value (e.g. `"totalCarriers": 120`) in the response, not just a 200 status, since a
-stale cached or default Pages placeholder page would also 200.
+**Verified live on GitHub Pages, not just locally**: pushed `f54d870`, then polled
+`GET /repos/Jeevan-0508/shadow-network/pages/builds/latest` once (a single wait, not a loop) until its
+`status` moved from `"building"` to `"built"` for that exact commit sha. Then fetched
+`https://jeevan-0508.github.io/shadow-network/` (200) and its `data.js` (200) directly and grepped for
+real values, not just a 200 status (a stale cached or default Pages placeholder page would also 200):
+confirmed `"totalCarriers": 120` and `"seed": "shadow-network-genesis"` in the live response, matching
+the actual sim state exactly.
 
 ## Next action
 
-1. Push this commit, then verify the live Pages URL serves real content (see above), not just local
-   `docs/index.html`.
-2. Take an actual screenshot once a working capture method is confirmed (try again in a future session;
+1. Take an actual screenshot once a working capture method is confirmed (try again in a future session;
    the tool may work in a different environment/session even though it did not here), and add it to the
    README per the existing convention ("add screenshots the moment there is a running site to
-   screenshot").
-3. Message the lead (thread `1789928915465-49`) with the live dashboard URL once step 1 confirms it
-   actually works, not before.
-4. After that: case-detail view with full replay/lineage (click an incident, see its `causalTrace`,
-   the brief the council actually saw, and the verdict), then the force-directed network graph for
-   collusion rings, per the original roadmap ordering, unless the user's next message points somewhere
-   else first (this session already deviated from the brief's ordering once, on direct request, and
-   that is the correct call to make again if asked).
+   screenshot"). The live URL itself already stands in for now.
+2. Case-detail view with full replay/lineage (click an incident, see its `causalTrace`, the brief the
+   council actually saw, and the verdict), then the force-directed network graph for collusion rings,
+   per the original roadmap ordering, unless the user's next message points somewhere else first (this
+   session already deviated from the brief's ordering once, on direct request, and that is the correct
+   call to make again if asked).
 
 ## Standing constraints, unchanged
 
