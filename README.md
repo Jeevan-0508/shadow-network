@@ -5,8 +5,8 @@ corrupt over time, some form collusion rings and commit incidents drawn from a r
 a BYOK AI investigator council reviews the flagged activity and opens cases. A public leaderboard tracks
 AI vs fraud win rate across the sim's whole history.
 
-Status: core simulation engine only. No AI council, no site and no scheduled tick yet. See `HANDOFF.md`
-for exact state and next action.
+Status: core simulation engine plus a minimal BYOK AI council are working end to end, locally. No
+site and no scheduled tick yet. See `HANDOFF.md` for exact state and next action.
 
 ## What is simulated vs what is real
 
@@ -26,6 +26,26 @@ fraud are grounded in professional experience even though the *carriers* and *in
 - `runSimulation(genesis, days)` calls `tickDay` in a loop and accumulates the full incident log, for
   tests and for the eventual daily-tick script.
 
+## How the council works
+
+- `buildCaseBrief(event, state)` redacts a flagged event down to what a real investigator would see:
+  legitimacy signal, severity, relationship-graph membership. It never carries the sim's own
+  `groundTruthFraud`, `kind`, `patternId` or `causalTrace` into the brief, so the council is genuinely
+  deciding, not reading the answer key.
+- `ruleBasedVerdict(brief)` is the always-available, zero-cost reviewer: a small rule-based heuristic
+  that needs no API key and produces a `Verdict` (`fraud` or `clear`, with confidence and reasoning).
+- `createLlmReasoner(options)` is the optional BYOK layer: supply your own API key and endpoint, and a
+  real model call can override the rule-based verdict. Any failure (no key, timeout, bad JSON, a
+  fabricated reference to a carrier the brief never gave it) degrades safely back to the rule-based
+  verdict, so a bad or missing key can only slow a review down, never break it or cost money by
+  default.
+- `reviewDay(events, state, options)` runs the whole thing for one day's events, defaulting to the
+  zero-cost reviewer.
+- `deriveOutcome(event, verdict)` is the only place ground truth and a verdict ever meet: it scores the
+  verdict as a catch, a miss, a false positive, or a correct clear, strictly after the verdict exists.
+- `buildLeaderboard(reviewed)` folds outcomes into a cumulative, day-by-day "AI vs fraud" win rate, the
+  same pure-recompute architecture as `runSimulation`.
+
 Run the tests: `bun test`. Typecheck: `bun run typecheck`.
 
 ## Roadmap
@@ -33,7 +53,8 @@ Run the tests: `bun test`. Typecheck: `bun run typecheck`.
 1. Data model and deterministic tick engine, with unit tests. **Done.**
 2. Fraud injection with full causal trace per incident. **Done**, folded into the tick engine.
 3. BYOK AI council reviews a day's flagged incidents and returns verdicts. Leaderboard wired to real
-   outcomes (catch, miss, false positive) from day one.
+   outcomes (catch, miss, false positive, correct clear). **Done**, single-model reviewer, not yet the
+   full multi-model council.
 4. Scheduled GitHub Action runs the tick daily and commits the new snapshot.
 5. Static site: leaderboard trend, case list, case detail with replay/lineage.
 6. Force-directed network graph for collusion rings.
