@@ -5,8 +5,8 @@ corrupt over time, some form collusion rings and commit incidents drawn from a r
 a BYOK AI investigator council reviews the flagged activity and opens cases. A public leaderboard tracks
 AI vs fraud win rate across the sim's whole history.
 
-Status: core simulation engine plus a minimal BYOK AI council are working end to end, locally. No
-site and no scheduled tick yet. See `HANDOFF.md` for exact state and next action.
+Status: core simulation engine, BYOK AI council and a scheduled daily tick are all working end to
+end. No site yet. See `HANDOFF.md` for exact state and next action.
 
 ## What is simulated vs what is real
 
@@ -48,6 +48,15 @@ fraud are grounded in professional experience even though the *carriers* and *in
 
 Run the tests: `bun test`. Typecheck: `bun run typecheck`.
 
+## How the daily tick works
+
+`scripts/run-tick.ts` is what `.github/workflows/tick.yml` runs once a day. It never persists mutable
+state: `daysSinceGenesis` (in `src/core/calendar.ts`) turns today's UTC date into a day count against a
+fixed genesis date, and the whole history is recomputed from `DEFAULT_CONFIG.seed` up to that day count
+every single run. Losing `data/latest.json` costs nothing but one script run to regenerate it. The
+committed snapshot is rounded to 2 decimal places purely for readable git diffs, the engine's internal
+math stays full precision.
+
 ## Roadmap
 
 1. Data model and deterministic tick engine, with unit tests. **Done.**
@@ -55,7 +64,7 @@ Run the tests: `bun test`. Typecheck: `bun run typecheck`.
 3. BYOK AI council reviews a day's flagged incidents and returns verdicts. Leaderboard wired to real
    outcomes (catch, miss, false positive, correct clear). **Done**, single-model reviewer, not yet the
    full multi-model council.
-4. Scheduled GitHub Action runs the tick daily and commits the new snapshot.
+4. Scheduled GitHub Action runs the tick daily and commits the new snapshot. **Done.**
 5. Static site: leaderboard trend, case list, case detail with replay/lineage.
 6. Force-directed network graph for collusion rings.
 7. Playable "step into a past day as analyst" mode.

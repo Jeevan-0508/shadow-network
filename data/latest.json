@@ -1,0 +1,1724 @@
+{
+  "day": 0,
+  "generatedAt": "2026-09-20T18:58:25.097Z",
+  "seed": "shadow-network-genesis",
+  "carriers": [
+    {
+      "id": "CAR-0001",
+      "name": "Granite Cargo BV",
+      "scac": "FXYV",
+      "status": "active",
+      "legitimacyScore": 72.05,
+      "driftRate": 0.13,
+      "laneIds": [
+        "LN-001",
+        "LN-023",
+        "LN-011"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0002",
+      "name": "Harbor Transport Spedition",
+      "scac": "RWRD",
+      "status": "active",
+      "legitimacyScore": 79.69,
+      "driftRate": -0.05,
+      "laneIds": [
+        "LN-001"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0003",
+      "name": "Union Lines SA",
+      "scac": "ULCM",
+      "status": "active",
+      "legitimacyScore": 87.09,
+      "driftRate": 0.22,
+      "laneIds": [
+        "LN-015",
+        "LN-018",
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0004",
+      "name": "Summit Trucking Co",
+      "scac": "CSJB",
+      "status": "active",
+      "legitimacyScore": 80.62,
+      "driftRate": 0.04,
+      "laneIds": [
+        "LN-024",
+        "LN-022"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0005",
+      "name": "Cobalt Express Ltd",
+      "scac": "RXRM",
+      "status": "active",
+      "legitimacyScore": 70.04,
+      "driftRate": -0.03,
+      "laneIds": [
+        "LN-016",
+        "LN-024",
+        "LN-011"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0006",
+      "name": "Meridian Cargo Co",
+      "scac": "UFZH",
+      "status": "active",
+      "legitimacyScore": 74.48,
+      "driftRate": -0.04,
+      "laneIds": [
+        "LN-014"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0007",
+      "name": "Northern Lines SA",
+      "scac": "KAOT",
+      "status": "active",
+      "legitimacyScore": 90.95,
+      "driftRate": 0.23,
+      "laneIds": [
+        "LN-010",
+        "LN-012"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0008",
+      "name": "Meridian Haulage BV",
+      "scac": "YJWW",
+      "status": "active",
+      "legitimacyScore": 64.93,
+      "driftRate": -0.83,
+      "laneIds": [
+        "LN-019",
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0009",
+      "name": "Ridgeline Cargo SA",
+      "scac": "THDR",
+      "status": "active",
+      "legitimacyScore": 76.17,
+      "driftRate": -0.04,
+      "laneIds": [
+        "LN-009",
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0010",
+      "name": "Meridian Express Inc",
+      "scac": "EQVH",
+      "status": "active",
+      "legitimacyScore": 70.08,
+      "driftRate": 0.03,
+      "laneIds": [
+        "LN-021",
+        "LN-006",
+        "LN-011"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0011",
+      "name": "Anchor Express Co",
+      "scac": "GELX",
+      "status": "active",
+      "legitimacyScore": 93.64,
+      "driftRate": 0.06,
+      "laneIds": [
+        "LN-017",
+        "LN-015"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0012",
+      "name": "Falcon Freight Co",
+      "scac": "ZAVR",
+      "status": "active",
+      "legitimacyScore": 73.27,
+      "driftRate": 0.24,
+      "laneIds": [
+        "LN-024",
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0013",
+      "name": "Redwood Lines Spedition",
+      "scac": "LUGS",
+      "status": "active",
+      "legitimacyScore": 93.07,
+      "driftRate": -0.13,
+      "laneIds": [
+        "LN-008",
+        "LN-004",
+        "LN-020"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0014",
+      "name": "Continental Trucking Spedition",
+      "scac": "QITK",
+      "status": "active",
+      "legitimacyScore": 80.52,
+      "driftRate": 0.1,
+      "laneIds": [
+        "LN-007",
+        "LN-021",
+        "LN-003"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0015",
+      "name": "Vanguard Trucking Inc",
+      "scac": "KVVR",
+      "status": "active",
+      "legitimacyScore": 86.17,
+      "driftRate": -0.03,
+      "laneIds": [
+        "LN-024",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0016",
+      "name": "Crown Transport BV",
+      "scac": "TKXU",
+      "status": "active",
+      "legitimacyScore": 93.04,
+      "driftRate": -0.12,
+      "laneIds": [
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0017",
+      "name": "Union Carriers AG",
+      "scac": "XQNK",
+      "status": "active",
+      "legitimacyScore": 40.34,
+      "driftRate": -1.16,
+      "laneIds": [
+        "LN-001",
+        "LN-020"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0018",
+      "name": "Amber Trucking Co",
+      "scac": "DSES",
+      "status": "active",
+      "legitimacyScore": 92.19,
+      "driftRate": 0.09,
+      "laneIds": [
+        "LN-023",
+        "LN-018"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0019",
+      "name": "Coastal Lines AG",
+      "scac": "OOKU",
+      "status": "active",
+      "legitimacyScore": 60.55,
+      "driftRate": -0.67,
+      "laneIds": [
+        "LN-018",
+        "LN-013",
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0020",
+      "name": "Highline Freight Ltd",
+      "scac": "GREM",
+      "status": "active",
+      "legitimacyScore": 89.36,
+      "driftRate": -0.09,
+      "laneIds": [
+        "LN-022"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0021",
+      "name": "Falcon Transport Ltd",
+      "scac": "YXJN",
+      "status": "active",
+      "legitimacyScore": 96.31,
+      "driftRate": 0.04,
+      "laneIds": [
+        "LN-009"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0022",
+      "name": "Redwood Shipping Spedition",
+      "scac": "BURG",
+      "status": "active",
+      "legitimacyScore": 95.72,
+      "driftRate": -0.09,
+      "laneIds": [
+        "LN-010",
+        "LN-004",
+        "LN-014"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0023",
+      "name": "Meridian Lines GmbH",
+      "scac": "ZAOE",
+      "status": "active",
+      "legitimacyScore": 74.61,
+      "driftRate": 0.04,
+      "laneIds": [
+        "LN-009",
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0024",
+      "name": "Highline Logistics SA",
+      "scac": "WCZB",
+      "status": "active",
+      "legitimacyScore": 97.66,
+      "driftRate": 0,
+      "laneIds": [
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0025",
+      "name": "Redwood Carriers GmbH",
+      "scac": "AOFH",
+      "status": "active",
+      "legitimacyScore": 63.2,
+      "driftRate": -0.34,
+      "laneIds": [
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0026",
+      "name": "Falcon Logistics GmbH",
+      "scac": "RERE",
+      "status": "active",
+      "legitimacyScore": 88.59,
+      "driftRate": -0.02,
+      "laneIds": [
+        "LN-006",
+        "LN-008",
+        "LN-003"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0027",
+      "name": "Atlantic Freight Inc",
+      "scac": "TGXH",
+      "status": "active",
+      "legitimacyScore": 76.63,
+      "driftRate": 0.14,
+      "laneIds": [
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0028",
+      "name": "Hazel Transport BV",
+      "scac": "OTGC",
+      "status": "active",
+      "legitimacyScore": 91.39,
+      "driftRate": 0.04,
+      "laneIds": [
+        "LN-023",
+        "LN-006",
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0029",
+      "name": "Continental Logistics Inc",
+      "scac": "CPOR",
+      "status": "active",
+      "legitimacyScore": 73.31,
+      "driftRate": -0.06,
+      "laneIds": [
+        "LN-024"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0030",
+      "name": "Harbor Lines SA",
+      "scac": "HGFN",
+      "status": "active",
+      "legitimacyScore": 75.19,
+      "driftRate": -0.13,
+      "laneIds": [
+        "LN-013"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0031",
+      "name": "Union Carriers Ltd",
+      "scac": "DOZE",
+      "status": "active",
+      "legitimacyScore": 86.06,
+      "driftRate": -0.1,
+      "laneIds": [
+        "LN-019",
+        "LN-008"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0032",
+      "name": "Cobalt Logistics SA",
+      "scac": "EGVI",
+      "status": "active",
+      "legitimacyScore": 95.88,
+      "driftRate": -0.07,
+      "laneIds": [
+        "LN-022",
+        "LN-004",
+        "LN-006"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0033",
+      "name": "Pioneer Shipping AG",
+      "scac": "JNFH",
+      "status": "active",
+      "legitimacyScore": 80.45,
+      "driftRate": 0.19,
+      "laneIds": [
+        "LN-019",
+        "LN-009",
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0034",
+      "name": "Silver Logistics Ltd",
+      "scac": "PLFU",
+      "status": "active",
+      "legitimacyScore": 86.2,
+      "driftRate": 0.21,
+      "laneIds": [
+        "LN-016",
+        "LN-023",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0035",
+      "name": "Northern Trucking Inc",
+      "scac": "NPWL",
+      "status": "active",
+      "legitimacyScore": 89.92,
+      "driftRate": 0.15,
+      "laneIds": [
+        "LN-018"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0036",
+      "name": "Cascade Logistics BV",
+      "scac": "ARUW",
+      "status": "active",
+      "legitimacyScore": 97.86,
+      "driftRate": -0.1,
+      "laneIds": [
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0037",
+      "name": "Redwood Freight Spedition",
+      "scac": "IPAV",
+      "status": "active",
+      "legitimacyScore": 94.47,
+      "driftRate": 0.11,
+      "laneIds": [
+        "LN-016",
+        "LN-003"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0038",
+      "name": "Ember Shipping Ltd",
+      "scac": "QXGS",
+      "status": "active",
+      "legitimacyScore": 58.59,
+      "driftRate": -0.3,
+      "laneIds": [
+        "LN-019",
+        "LN-012"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0039",
+      "name": "Vanguard Trucking SA",
+      "scac": "PMRX",
+      "status": "active",
+      "legitimacyScore": 93.85,
+      "driftRate": 0.11,
+      "laneIds": [
+        "LN-003"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0040",
+      "name": "Cobalt Trucking GmbH",
+      "scac": "EIMN",
+      "status": "active",
+      "legitimacyScore": 80.37,
+      "driftRate": 0.03,
+      "laneIds": [
+        "LN-023",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0041",
+      "name": "Vanguard Carriers Inc",
+      "scac": "SLRZ",
+      "status": "active",
+      "legitimacyScore": 93.68,
+      "driftRate": -0.01,
+      "laneIds": [
+        "LN-006",
+        "LN-012"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0042",
+      "name": "Union Cargo Ltd",
+      "scac": "BPXF",
+      "status": "active",
+      "legitimacyScore": 74.2,
+      "driftRate": 0.17,
+      "laneIds": [
+        "LN-013",
+        "LN-017"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0043",
+      "name": "Continental Lines AG",
+      "scac": "ZXQJ",
+      "status": "active",
+      "legitimacyScore": 78.11,
+      "driftRate": -0.11,
+      "laneIds": [
+        "LN-001",
+        "LN-020",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0044",
+      "name": "Prairie Transport Inc",
+      "scac": "HFGG",
+      "status": "active",
+      "legitimacyScore": 89.53,
+      "driftRate": 0.17,
+      "laneIds": [
+        "LN-023"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0045",
+      "name": "Meridian Carriers Co",
+      "scac": "CYSF",
+      "status": "active",
+      "legitimacyScore": 73.66,
+      "driftRate": 0.1,
+      "laneIds": [
+        "LN-005",
+        "LN-014",
+        "LN-019"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0046",
+      "name": "Prairie Haulage Co",
+      "scac": "ZNTX",
+      "status": "active",
+      "legitimacyScore": 76.94,
+      "driftRate": -0.01,
+      "laneIds": [
+        "LN-017",
+        "LN-010",
+        "LN-020"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0047",
+      "name": "Copper Haulage Spedition",
+      "scac": "KCJU",
+      "status": "active",
+      "legitimacyScore": 95.85,
+      "driftRate": 0.12,
+      "laneIds": [
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0048",
+      "name": "Redwood Express Spedition",
+      "scac": "CKES",
+      "status": "active",
+      "legitimacyScore": 89.5,
+      "driftRate": -0.13,
+      "laneIds": [
+        "LN-019",
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0049",
+      "name": "Northern Haulage SA",
+      "scac": "SJMJ",
+      "status": "active",
+      "legitimacyScore": 70.15,
+      "driftRate": -0.02,
+      "laneIds": [
+        "LN-020"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0050",
+      "name": "Union Transport Spedition",
+      "scac": "HHDH",
+      "status": "active",
+      "legitimacyScore": 73.86,
+      "driftRate": 0.02,
+      "laneIds": [
+        "LN-022",
+        "LN-011"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0051",
+      "name": "Highline Transport GmbH",
+      "scac": "XBCE",
+      "status": "active",
+      "legitimacyScore": 87.19,
+      "driftRate": 0.09,
+      "laneIds": [
+        "LN-008"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0052",
+      "name": "Continental Shipping AG",
+      "scac": "RWMY",
+      "status": "active",
+      "legitimacyScore": 74.9,
+      "driftRate": 0.18,
+      "laneIds": [
+        "LN-011",
+        "LN-018"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0053",
+      "name": "Ember Cargo SA",
+      "scac": "ZXJT",
+      "status": "active",
+      "legitimacyScore": 95.7,
+      "driftRate": -0.11,
+      "laneIds": [
+        "LN-015",
+        "LN-003"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0054",
+      "name": "Windward Logistics GmbH",
+      "scac": "GKDD",
+      "status": "active",
+      "legitimacyScore": 97.88,
+      "driftRate": 0.09,
+      "laneIds": [
+        "LN-009",
+        "LN-019"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0055",
+      "name": "Anchor Trucking Co",
+      "scac": "FTKT",
+      "status": "active",
+      "legitimacyScore": 97.27,
+      "driftRate": -0.04,
+      "laneIds": [
+        "LN-013"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0056",
+      "name": "Coastal Transport GmbH",
+      "scac": "IUUC",
+      "status": "active",
+      "legitimacyScore": 93.87,
+      "driftRate": -0.13,
+      "laneIds": [
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0057",
+      "name": "Redwood Transport Ltd",
+      "scac": "YMNZ",
+      "status": "active",
+      "legitimacyScore": 73.16,
+      "driftRate": 0.04,
+      "laneIds": [
+        "LN-015"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0058",
+      "name": "Meridian Express GmbH",
+      "scac": "FAWX",
+      "status": "active",
+      "legitimacyScore": 77.92,
+      "driftRate": 0.07,
+      "laneIds": [
+        "LN-023",
+        "LN-024"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0059",
+      "name": "Northern Freight BV",
+      "scac": "URWB",
+      "status": "active",
+      "legitimacyScore": 73.04,
+      "driftRate": -0.09,
+      "laneIds": [
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0060",
+      "name": "Silver Shipping GmbH",
+      "scac": "KNLU",
+      "status": "active",
+      "legitimacyScore": 85.15,
+      "driftRate": -0.02,
+      "laneIds": [
+        "LN-017"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0061",
+      "name": "Ridgeline Trucking Co",
+      "scac": "HWAI",
+      "status": "active",
+      "legitimacyScore": 95.14,
+      "driftRate": 0.08,
+      "laneIds": [
+        "LN-022"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0062",
+      "name": "Crown Express Spedition",
+      "scac": "UDKJ",
+      "status": "active",
+      "legitimacyScore": 77.02,
+      "driftRate": 0.24,
+      "laneIds": [
+        "LN-003",
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0063",
+      "name": "Silver Trucking Ltd",
+      "scac": "BUAP",
+      "status": "active",
+      "legitimacyScore": 60.44,
+      "driftRate": -0.27,
+      "laneIds": [
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0064",
+      "name": "Windward Haulage GmbH",
+      "scac": "TIXY",
+      "status": "active",
+      "legitimacyScore": 88.89,
+      "driftRate": 0.05,
+      "laneIds": [
+        "LN-009",
+        "LN-018",
+        "LN-006"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0065",
+      "name": "Cascade Shipping Co",
+      "scac": "EHOV",
+      "status": "active",
+      "legitimacyScore": 71.02,
+      "driftRate": 0.1,
+      "laneIds": [
+        "LN-005",
+        "LN-002",
+        "LN-020"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0066",
+      "name": "Cobalt Transport Spedition",
+      "scac": "QPAN",
+      "status": "active",
+      "legitimacyScore": 54.91,
+      "driftRate": -0.23,
+      "laneIds": [
+        "LN-011"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0067",
+      "name": "Cobalt Carriers BV",
+      "scac": "HVNZ",
+      "status": "active",
+      "legitimacyScore": 73.43,
+      "driftRate": 0.25,
+      "laneIds": [
+        "LN-009"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0068",
+      "name": "Cobalt Transport Inc",
+      "scac": "ZIQV",
+      "status": "active",
+      "legitimacyScore": 94.06,
+      "driftRate": 0.15,
+      "laneIds": [
+        "LN-018",
+        "LN-008",
+        "LN-012"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0069",
+      "name": "Granite Carriers BV",
+      "scac": "IBQY",
+      "status": "active",
+      "legitimacyScore": 76.17,
+      "driftRate": 0.15,
+      "laneIds": [
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0070",
+      "name": "Union Freight Inc",
+      "scac": "HVZF",
+      "status": "active",
+      "legitimacyScore": 77.2,
+      "driftRate": -0.13,
+      "laneIds": [
+        "LN-019",
+        "LN-013",
+        "LN-005"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0071",
+      "name": "Iron Trucking GmbH",
+      "scac": "HTFB",
+      "status": "active",
+      "legitimacyScore": 90.98,
+      "driftRate": 0.24,
+      "laneIds": [
+        "LN-009"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0072",
+      "name": "Ridgeline Lines Co",
+      "scac": "XPWT",
+      "status": "active",
+      "legitimacyScore": 88.9,
+      "driftRate": 0.22,
+      "laneIds": [
+        "LN-015",
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0073",
+      "name": "Redwood Trucking GmbH",
+      "scac": "JQNR",
+      "status": "active",
+      "legitimacyScore": 96.7,
+      "driftRate": 0.12,
+      "laneIds": [
+        "LN-023",
+        "LN-012",
+        "LN-008"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0074",
+      "name": "Silver Carriers Co",
+      "scac": "BXSN",
+      "status": "active",
+      "legitimacyScore": 77.49,
+      "driftRate": -0.03,
+      "laneIds": [
+        "LN-021",
+        "LN-015"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0075",
+      "name": "Windward Shipping Inc",
+      "scac": "KKLJ",
+      "status": "active",
+      "legitimacyScore": 84.55,
+      "driftRate": 0.21,
+      "laneIds": [
+        "LN-023"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0076",
+      "name": "Meridian Haulage Spedition",
+      "scac": "HZLX",
+      "status": "active",
+      "legitimacyScore": 42.32,
+      "driftRate": -0.64,
+      "laneIds": [
+        "LN-015",
+        "LN-009"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0077",
+      "name": "Falcon Trucking Co",
+      "scac": "VHJN",
+      "status": "active",
+      "legitimacyScore": 77.29,
+      "driftRate": -0.07,
+      "laneIds": [
+        "LN-019",
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0078",
+      "name": "Summit Cargo Inc",
+      "scac": "IHLS",
+      "status": "active",
+      "legitimacyScore": 77.73,
+      "driftRate": 0.07,
+      "laneIds": [
+        "LN-024",
+        "LN-009"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0079",
+      "name": "Vanguard Logistics Ltd",
+      "scac": "LNDN",
+      "status": "active",
+      "legitimacyScore": 71.54,
+      "driftRate": 0.04,
+      "laneIds": [
+        "LN-013",
+        "LN-022"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0080",
+      "name": "Highline Trucking Spedition",
+      "scac": "OIAV",
+      "status": "active",
+      "legitimacyScore": 89.38,
+      "driftRate": 0.19,
+      "laneIds": [
+        "LN-002",
+        "LN-001"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0081",
+      "name": "Iron Freight GmbH",
+      "scac": "NUDC",
+      "status": "active",
+      "legitimacyScore": 59.76,
+      "driftRate": -0.39,
+      "laneIds": [
+        "LN-021",
+        "LN-013",
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0082",
+      "name": "Harbor Transport AG",
+      "scac": "LEIL",
+      "status": "active",
+      "legitimacyScore": 92.46,
+      "driftRate": 0.03,
+      "laneIds": [
+        "LN-014"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0083",
+      "name": "Northern Logistics SA",
+      "scac": "IOHB",
+      "status": "active",
+      "legitimacyScore": 76.44,
+      "driftRate": -0.02,
+      "laneIds": [
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0084",
+      "name": "Pioneer Express Inc",
+      "scac": "XUWM",
+      "status": "active",
+      "legitimacyScore": 77.74,
+      "driftRate": 0.1,
+      "laneIds": [
+        "LN-003",
+        "LN-016",
+        "LN-015"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0085",
+      "name": "Summit Shipping AG",
+      "scac": "GHEH",
+      "status": "active",
+      "legitimacyScore": 81.17,
+      "driftRate": -0.07,
+      "laneIds": [
+        "LN-014"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0086",
+      "name": "Vanguard Trucking AG",
+      "scac": "ZEJJ",
+      "status": "active",
+      "legitimacyScore": 71.8,
+      "driftRate": -0.07,
+      "laneIds": [
+        "LN-015"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0087",
+      "name": "Falcon Transport Inc",
+      "scac": "HTWS",
+      "status": "active",
+      "legitimacyScore": 88.64,
+      "driftRate": 0.11,
+      "laneIds": [
+        "LN-001",
+        "LN-019"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0088",
+      "name": "Granite Haulage Ltd",
+      "scac": "KMSI",
+      "status": "active",
+      "legitimacyScore": 44.41,
+      "driftRate": -0.61,
+      "laneIds": [
+        "LN-002",
+        "LN-012",
+        "LN-006"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0089",
+      "name": "Highline Logistics AG",
+      "scac": "WWRF",
+      "status": "active",
+      "legitimacyScore": 86.86,
+      "driftRate": 0.23,
+      "laneIds": [
+        "LN-006",
+        "LN-015",
+        "LN-024"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0090",
+      "name": "Redwood Lines BV",
+      "scac": "NQYU",
+      "status": "active",
+      "legitimacyScore": 93.35,
+      "driftRate": 0.13,
+      "laneIds": [
+        "LN-001"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0091",
+      "name": "Vanguard Trucking GmbH",
+      "scac": "KSFK",
+      "status": "active",
+      "legitimacyScore": 74.86,
+      "driftRate": -0.03,
+      "laneIds": [
+        "LN-010",
+        "LN-018",
+        "LN-012"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0092",
+      "name": "Silver Shipping AG",
+      "scac": "GIYE",
+      "status": "active",
+      "legitimacyScore": 88.46,
+      "driftRate": 0.21,
+      "laneIds": [
+        "LN-008",
+        "LN-021",
+        "LN-024"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0093",
+      "name": "Granite Transport Inc",
+      "scac": "XFGQ",
+      "status": "active",
+      "legitimacyScore": 84.08,
+      "driftRate": 0.01,
+      "laneIds": [
+        "LN-013",
+        "LN-009"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0094",
+      "name": "Hazel Logistics BV",
+      "scac": "RDLR",
+      "status": "active",
+      "legitimacyScore": 84.04,
+      "driftRate": -0.14,
+      "laneIds": [
+        "LN-001",
+        "LN-003",
+        "LN-014"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0095",
+      "name": "Cobalt Logistics Ltd",
+      "scac": "THKA",
+      "status": "active",
+      "legitimacyScore": 78.72,
+      "driftRate": 0.02,
+      "laneIds": [
+        "LN-008"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0096",
+      "name": "Highline Haulage SA",
+      "scac": "FBBG",
+      "status": "active",
+      "legitimacyScore": 76.29,
+      "driftRate": 0,
+      "laneIds": [
+        "LN-020"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0097",
+      "name": "Meridian Shipping Spedition",
+      "scac": "SROK",
+      "status": "active",
+      "legitimacyScore": 89.42,
+      "driftRate": 0.22,
+      "laneIds": [
+        "LN-017",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0098",
+      "name": "Continental Shipping BV",
+      "scac": "IJLM",
+      "status": "active",
+      "legitimacyScore": 87.4,
+      "driftRate": 0.19,
+      "laneIds": [
+        "LN-005",
+        "LN-023",
+        "LN-012"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0099",
+      "name": "Summit Express Inc",
+      "scac": "KGIP",
+      "status": "active",
+      "legitimacyScore": 46.73,
+      "driftRate": -0.84,
+      "laneIds": [
+        "LN-007",
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0100",
+      "name": "Windward Transport Ltd",
+      "scac": "VXED",
+      "status": "active",
+      "legitimacyScore": 90.35,
+      "driftRate": -0.11,
+      "laneIds": [
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0101",
+      "name": "Summit Freight Ltd",
+      "scac": "WEZU",
+      "status": "active",
+      "legitimacyScore": 89.26,
+      "driftRate": 0.01,
+      "laneIds": [
+        "LN-002"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0102",
+      "name": "Harbor Haulage Spedition",
+      "scac": "GWVZ",
+      "status": "active",
+      "legitimacyScore": 78.35,
+      "driftRate": -0.07,
+      "laneIds": [
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0103",
+      "name": "Silver Lines SA",
+      "scac": "QSEB",
+      "status": "active",
+      "legitimacyScore": 92.4,
+      "driftRate": 0,
+      "laneIds": [
+        "LN-008",
+        "LN-019"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0104",
+      "name": "Northern Freight Inc",
+      "scac": "CDHX",
+      "status": "active",
+      "legitimacyScore": 46.44,
+      "driftRate": -0.26,
+      "laneIds": [
+        "LN-021"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0105",
+      "name": "Northern Freight SA",
+      "scac": "QPXP",
+      "status": "active",
+      "legitimacyScore": 81.61,
+      "driftRate": 0.21,
+      "laneIds": [
+        "LN-005"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0106",
+      "name": "Crown Express Co",
+      "scac": "GXLF",
+      "status": "active",
+      "legitimacyScore": 88.46,
+      "driftRate": 0.06,
+      "laneIds": [
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0107",
+      "name": "Prairie Freight Co",
+      "scac": "IQPU",
+      "status": "active",
+      "legitimacyScore": 84.1,
+      "driftRate": 0,
+      "laneIds": [
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0108",
+      "name": "Hazel Express AG",
+      "scac": "YPUJ",
+      "status": "active",
+      "legitimacyScore": 93.95,
+      "driftRate": 0.08,
+      "laneIds": [
+        "LN-024",
+        "LN-011",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0109",
+      "name": "Crown Carriers GmbH",
+      "scac": "OAAS",
+      "status": "active",
+      "legitimacyScore": 48.03,
+      "driftRate": -0.1,
+      "laneIds": [
+        "LN-018"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0110",
+      "name": "Silver Haulage GmbH",
+      "scac": "MSAP",
+      "status": "active",
+      "legitimacyScore": 70.56,
+      "driftRate": 0.24,
+      "laneIds": [
+        "LN-018"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0111",
+      "name": "Pioneer Express SA",
+      "scac": "OGGD",
+      "status": "active",
+      "legitimacyScore": 74.57,
+      "driftRate": -0.12,
+      "laneIds": [
+        "LN-005"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0112",
+      "name": "Meridian Lines Ltd",
+      "scac": "QQFG",
+      "status": "active",
+      "legitimacyScore": 88.3,
+      "driftRate": 0.15,
+      "laneIds": [
+        "LN-005"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0113",
+      "name": "Ember Transport Ltd",
+      "scac": "SSNY",
+      "status": "active",
+      "legitimacyScore": 84.93,
+      "driftRate": 0.06,
+      "laneIds": [
+        "LN-001",
+        "LN-021",
+        "LN-010"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0114",
+      "name": "Windward Trucking SA",
+      "scac": "MOYD",
+      "status": "active",
+      "legitimacyScore": 91.29,
+      "driftRate": 0.13,
+      "laneIds": [
+        "LN-001"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0115",
+      "name": "Coastal Logistics GmbH",
+      "scac": "UUNX",
+      "status": "active",
+      "legitimacyScore": 76.95,
+      "driftRate": 0.07,
+      "laneIds": [
+        "LN-011",
+        "LN-001",
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0116",
+      "name": "Crown Logistics Spedition",
+      "scac": "YTFQ",
+      "status": "active",
+      "legitimacyScore": 57.8,
+      "driftRate": -0.41,
+      "laneIds": [
+        "LN-010",
+        "LN-004"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0117",
+      "name": "Windward Haulage AG",
+      "scac": "OAKP",
+      "status": "active",
+      "legitimacyScore": 75.84,
+      "driftRate": 0.07,
+      "laneIds": [
+        "LN-006"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0118",
+      "name": "Pioneer Carriers Ltd",
+      "scac": "PHYZ",
+      "status": "active",
+      "legitimacyScore": 81.14,
+      "driftRate": -0.09,
+      "laneIds": [
+        "LN-022",
+        "LN-007"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0119",
+      "name": "Northern Trucking SA",
+      "scac": "FQYJ",
+      "status": "active",
+      "legitimacyScore": 86.09,
+      "driftRate": -0.01,
+      "laneIds": [
+        "LN-020",
+        "LN-003",
+        "LN-016"
+      ],
+      "createdOnDay": 0
+    },
+    {
+      "id": "CAR-0120",
+      "name": "Vanguard Express SA",
+      "scac": "PAPY",
+      "status": "active",
+      "legitimacyScore": 93.02,
+      "driftRate": 0,
+      "laneIds": [
+        "LN-018"
+      ],
+      "createdOnDay": 0
+    }
+  ],
+  "lanes": [
+    {
+      "id": "LN-001",
+      "origin": "Louisville",
+      "destination": "Chicago",
+      "region": "NA",
+      "riskBaseline": 0.63
+    },
+    {
+      "id": "LN-002",
+      "origin": "Hamburg",
+      "destination": "Vienna",
+      "region": "EU",
+      "riskBaseline": 0.55
+    },
+    {
+      "id": "LN-003",
+      "origin": "Hamburg",
+      "destination": "Valencia",
+      "region": "EU",
+      "riskBaseline": 0.64
+    },
+    {
+      "id": "LN-004",
+      "origin": "Toronto",
+      "destination": "Laredo",
+      "region": "NA",
+      "riskBaseline": 0.38
+    },
+    {
+      "id": "LN-005",
+      "origin": "Vienna",
+      "destination": "Valencia",
+      "region": "EU",
+      "riskBaseline": 0.96
+    },
+    {
+      "id": "LN-006",
+      "origin": "Vienna",
+      "destination": "Gdansk",
+      "region": "EU",
+      "riskBaseline": 0.51
+    },
+    {
+      "id": "LN-007",
+      "origin": "Kansas City",
+      "destination": "Laredo",
+      "region": "NA",
+      "riskBaseline": 0.54
+    },
+    {
+      "id": "LN-008",
+      "origin": "Toronto",
+      "destination": "Savannah",
+      "region": "NA",
+      "riskBaseline": 0.22
+    },
+    {
+      "id": "LN-009",
+      "origin": "Toronto",
+      "destination": "Ontario",
+      "region": "NA",
+      "riskBaseline": 0.64
+    },
+    {
+      "id": "LN-010",
+      "origin": "Vienna",
+      "destination": "Lyon",
+      "region": "EU",
+      "riskBaseline": 0.37
+    },
+    {
+      "id": "LN-011",
+      "origin": "Columbus",
+      "destination": "Toronto",
+      "region": "NA",
+      "riskBaseline": 0.85
+    },
+    {
+      "id": "LN-012",
+      "origin": "Memphis",
+      "destination": "Monterrey",
+      "region": "NA",
+      "riskBaseline": 0.27
+    },
+    {
+      "id": "LN-013",
+      "origin": "Savannah",
+      "destination": "Memphis",
+      "region": "NA",
+      "riskBaseline": 0.29
+    },
+    {
+      "id": "LN-014",
+      "origin": "Monterrey",
+      "destination": "Atlanta",
+      "region": "NA",
+      "riskBaseline": 0.74
+    },
+    {
+      "id": "LN-015",
+      "origin": "Rotterdam",
+      "destination": "Bratislava",
+      "region": "EU",
+      "riskBaseline": 0.77
+    },
+    {
+      "id": "LN-016",
+      "origin": "Kansas City",
+      "destination": "Toronto",
+      "region": "NA",
+      "riskBaseline": 0.44
+    },
+    {
+      "id": "LN-017",
+      "origin": "Bratislava",
+      "destination": "Valencia",
+      "region": "EU",
+      "riskBaseline": 0.68
+    },
+    {
+      "id": "LN-018",
+      "origin": "Columbus",
+      "destination": "Monterrey",
+      "region": "NA",
+      "riskBaseline": 0.39
+    },
+    {
+      "id": "LN-019",
+      "origin": "Chicago",
+      "destination": "Toronto",
+      "region": "NA",
+      "riskBaseline": 0.59
+    },
+    {
+      "id": "LN-020",
+      "origin": "Laredo",
+      "destination": "Chicago",
+      "region": "NA",
+      "riskBaseline": 0.73
+    },
+    {
+      "id": "LN-021",
+      "origin": "Brno",
+      "destination": "Milan",
+      "region": "EU",
+      "riskBaseline": 0.53
+    },
+    {
+      "id": "LN-022",
+      "origin": "Lyon",
+      "destination": "Warsaw",
+      "region": "EU",
+      "riskBaseline": 0.74
+    },
+    {
+      "id": "LN-023",
+      "origin": "Valencia",
+      "destination": "Hamburg",
+      "region": "EU",
+      "riskBaseline": 0.28
+    },
+    {
+      "id": "LN-024",
+      "origin": "Monterrey",
+      "destination": "Memphis",
+      "region": "NA",
+      "riskBaseline": 0.48
+    }
+  ],
+  "relationships": [],
+  "todaysIncidents": [],
+  "todaysVerdicts": [],
+  "leaderboard": []
+}

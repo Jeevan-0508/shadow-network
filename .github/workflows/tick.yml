@@ -1,0 +1,42 @@
+name: Daily tick
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shadow-network-tick
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install --frozen-lockfile
+
+      - run: bun test
+
+      - run: bun run tick
+
+      - name: Commit the new snapshot, if the day advanced
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest.json
+          if git diff --cached --quiet; then
+            echo "No change to data/latest.json, nothing to commit."
+          else
+            DAY=$(node -p "require('./data/latest.json').day")
+            git commit -m "Daily tick: day ${DAY}"
+            git push
+          fi
