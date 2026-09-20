@@ -30,27 +30,35 @@ New this session, the scheduled tick (slice 4 of the original numbering):
 Tests: 74 passing (`bun test`), typecheck clean. Verified by running both, and by actually running
 `bun run tick` locally and inspecting `data/latest.json`'s shape and precision before committing it.
 
-**Not yet verified**: that the Action runs unattended on GitHub's own infrastructure, only that the
-same script works locally. Next action below is to prove that before touching the UI, per the brief's
-explicit instruction not to build more on top of the Action until it is seen to actually run.
+**Verified live, not just locally**: dispatched `.github/workflows/tick.yml` manually via the API
+right after pushing it. Run `35530866320` went green, and `github-actions[bot]` actually pushed commit
+`f417900` ("Daily tick: day 0") to `main`, confirmed by reading `GET /repos/.../commits` afterward, not
+just trusting the workflow's own success status (a green run that silently skipped the commit step
+would have looked identical from status alone).
+
+**Caught and fixed a real bug from that same verification run**: the commit-skip check compared the
+whole `data/latest.json` file, including `generatedAt`, which changes every run. That made the "skip if
+nothing changed" branch dead code: it would commit a noisy timestamp-only diff on every manual
+re-dispatch of the same sim day. Fixed by comparing the `day` field specifically, read before and after
+the tick step, so a same-day re-run now correctly produces no commit. Not yet re-verified live (see
+next action 1).
 
 **Not started**: any UI, network graph, playable mode, multi-model council.
 
 ## Next action
 
-1. After this commit is pushed, trigger `.github/workflows/tick.yml` once via `workflow_dispatch`
-   (`POST /repos/Jeevan-0508/shadow-network/actions/workflows/tick.yml/dispatches` with `{"ref":"main"}`,
-   using the same `gho_` token pattern, scope `workflow` covers this) and confirm the run goes green and
-   actually commits `data/latest.json` (check `git log` on `main` afterward for a `github-actions[bot]`
-   commit, not just that the workflow's own status shows success, since a green run that silently
-   skipped the commit step would look identical from the workflow status alone).
-2. Once that is proven, slice 5: the static site. Leaderboard trend chart reading `data/latest.json`'s
+1. After this fix is pushed, dispatch the workflow once more and confirm it now correctly logs
+   "nothing to commit" and does NOT push a new commit, since day 0 has not advanced (same calendar
+   day). This is the one thing this handoff could not verify before writing it, since the fix was made
+   after the first live verification.
+2. Once that is confirmed, slice 5: the static site. Leaderboard trend chart reading `data/latest.json`'s
    `leaderboard` array, a case list from `todaysIncidents` (there will not be much real history until
    the Action has run for a number of days, which is fine and honest: an early README screenshot should
    say so rather than staging a fake multi-week history).
 3. Slice 6 (network graph) and slice 7 (playable mode) come after the site's core views exist, per the
    brief's ordering. Do not gold-plate the leaderboard/case views before the network graph exists either,
    per "do not gold-plate early pieces before the core loop works end to end" (the core loop is now
-   proven end to end computationally; the site is the next thing that has to actually be seen to work).
+   proven end to end computationally and live on GitHub; the site is the next thing that has to
+   actually be seen to work).
 
 Add screenshots to the README the moment there is a running site to screenshot, not before.
