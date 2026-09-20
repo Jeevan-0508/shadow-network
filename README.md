@@ -1,12 +1,23 @@
 # SHADOW//NETWORK
 
+[![Daily tick](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml/badge.svg)](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml)
+
+**Repo:** [github.com/Jeevan-0508/shadow-network](https://github.com/Jeevan-0508/shadow-network)
+**Live tick data:** [data/latest.json](https://github.com/Jeevan-0508/shadow-network/blob/main/data/latest.json)
+commits automatically once a day, badge above tracks whether that run is currently green.
+
+There is no live site yet (see Roadmap below), so those two links are the honest "live" thing to point
+at right now: a real scheduled job, actually running on GitHub's infrastructure, producing a real
+changing data file, not a screenshot or a promise.
+
 A persistent, synthetic freight-carrier economy that advances one day at a time. Carrier agents drift
 corrupt over time, some form collusion rings and commit incidents drawn from a real fraud taxonomy, and
 a BYOK AI investigator council reviews the flagged activity and opens cases. A public leaderboard tracks
 AI vs fraud win rate across the sim's whole history.
 
 Status: core simulation engine, BYOK AI council and a scheduled daily tick are all working end to
-end. No site yet. See `HANDOFF.md` for exact state and next action.
+end, and the tick has been verified running live on GitHub. No site yet. See `HANDOFF.md` for exact
+state and next action.
 
 ## What is simulated vs what is real
 

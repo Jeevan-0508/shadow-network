@@ -40,25 +40,26 @@ would have looked identical from status alone).
 whole `data/latest.json` file, including `generatedAt`, which changes every run. That made the "skip if
 nothing changed" branch dead code: it would commit a noisy timestamp-only diff on every manual
 re-dispatch of the same sim day. Fixed by comparing the `day` field specifically, read before and after
-the tick step, so a same-day re-run now correctly produces no commit. Not yet re-verified live (see
-next action 1).
+the tick step.
+
+**Re-verified live after the fix**: dispatched run `35531018075` on the fixed workflow. All steps
+succeeded, including the commit step, and `GET /repos/.../commits` afterward confirmed no new commit
+landed on top of the fix commit itself (`9ce8f27`), meaning the day-0-to-day-0 re-run correctly produced
+no push. Both the "commit on a real advance" and "skip on no advance" paths are now proven live, not
+just locally.
 
 **Not started**: any UI, network graph, playable mode, multi-model council.
 
 ## Next action
 
-1. After this fix is pushed, dispatch the workflow once more and confirm it now correctly logs
-   "nothing to commit" and does NOT push a new commit, since day 0 has not advanced (same calendar
-   day). This is the one thing this handoff could not verify before writing it, since the fix was made
-   after the first live verification.
-2. Once that is confirmed, slice 5: the static site. Leaderboard trend chart reading `data/latest.json`'s
+1. Slice 5: the static site. Leaderboard trend chart reading `data/latest.json`'s
    `leaderboard` array, a case list from `todaysIncidents` (there will not be much real history until
    the Action has run for a number of days, which is fine and honest: an early README screenshot should
    say so rather than staging a fake multi-week history).
-3. Slice 6 (network graph) and slice 7 (playable mode) come after the site's core views exist, per the
+2. Slice 6 (network graph) and slice 7 (playable mode) come after the site's core views exist, per the
    brief's ordering. Do not gold-plate the leaderboard/case views before the network graph exists either,
    per "do not gold-plate early pieces before the core loop works end to end" (the core loop is now
-   proven end to end computationally and live on GitHub; the site is the next thing that has to
-   actually be seen to work).
+   proven end to end, live on GitHub, both the commit and the skip path; the site is the next thing that
+   has to actually be seen to work).
 
 Add screenshots to the README the moment there is a running site to screenshot, not before.
