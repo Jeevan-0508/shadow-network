@@ -2,22 +2,21 @@
 
 [![Daily tick](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml/badge.svg)](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml)
 
+**Live dashboard:** [jeevan-0508.github.io/shadow-network](https://jeevan-0508.github.io/shadow-network/)
 **Repo:** [github.com/Jeevan-0508/shadow-network](https://github.com/Jeevan-0508/shadow-network)
 **Live tick data:** [data/latest.json](https://github.com/Jeevan-0508/shadow-network/blob/main/data/latest.json)
-commits automatically once a day, badge above tracks whether that run is currently green.
-
-There is no live site yet (see Roadmap below), so those two links are the honest "live" thing to point
-at right now: a real scheduled job, actually running on GitHub's infrastructure, producing a real
-changing data file, not a screenshot or a promise.
+commits automatically once a day, badge above tracks whether that run is currently green, and the
+dashboard rebuilds from it every run.
 
 A persistent, synthetic freight-carrier economy that advances one day at a time. Carrier agents drift
 corrupt over time, some form collusion rings and commit incidents drawn from a real fraud taxonomy, and
 a BYOK AI investigator council reviews the flagged activity and opens cases. A public leaderboard tracks
 AI vs fraud win rate across the sim's whole history.
 
-Status: core simulation engine, BYOK AI council and a scheduled daily tick are all working end to
-end, and the tick has been verified running live on GitHub. No site yet. See `HANDOFF.md` for exact
-state and next action.
+Status: core simulation engine, BYOK AI council, scheduled daily tick and a static dashboard are all
+working end to end and verified live on GitHub. The sim just went live today (day 0), so the dashboard
+is honestly quiet: no incidents, no collusion rings, no reviewed cases yet. That fills in over the
+coming days as carriers drift. See `HANDOFF.md` for exact state and next action.
 
 ## What is simulated vs what is real
 
@@ -68,6 +67,17 @@ every single run. Losing `data/latest.json` costs nothing but one script run to 
 committed snapshot is rounded to 2 decimal places purely for readable git diffs, the engine's internal
 math stays full precision.
 
+## How the dashboard works
+
+`scripts/build-site.ts` turns `data/latest.json` into `docs/data.js`, a plain `window.SHADOW_DATA = {...}`
+assignment rather than a `.json` file, so `docs/index.html` can pull it in with a `<script>` tag and
+work identically double-clicked locally or served by GitHub Pages. It computes display-only summary
+data on top of what the engine already produced: a legitimacy-score histogram, per-lane carrier counts,
+and a short plain-language "data report" (carrier counts, drift, incidents, win rate, collusion links),
+plus the leaderboard trend and today's incidents/verdicts tables straight from the snapshot. The daily
+tick Action runs this after `bun run tick` and commits `docs/data.js` alongside `data/latest.json`, so
+the dashboard is never more than a day stale. Run it locally: `bun run build-site`.
+
 ## Roadmap
 
 1. Data model and deterministic tick engine, with unit tests. **Done.**
@@ -76,6 +86,8 @@ math stays full precision.
    outcomes (catch, miss, false positive, correct clear). **Done**, single-model reviewer, not yet the
    full multi-model council.
 4. Scheduled GitHub Action runs the tick daily and commits the new snapshot. **Done.**
-5. Static site: leaderboard trend, case list, case detail with replay/lineage.
+5. Static dashboard: stat cards, plain-language data report, legitimacy histogram, leaderboard trend,
+   today's incidents/verdicts tables, lanes by risk. **Done**, deployed to GitHub Pages. Not yet done:
+   a case-detail view with full replay/lineage, and a force-directed network graph for collusion rings.
 6. Force-directed network graph for collusion rings.
 7. Playable "step into a past day as analyst" mode.

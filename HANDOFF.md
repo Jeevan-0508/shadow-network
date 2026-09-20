@@ -5,61 +5,79 @@ Last updated: 2026-09-21, by shadow-network-builder (sub-agent of akisa).
 ## Exact state
 
 Repo: `https://github.com/Jeevan-0508/shadow-network`, branch `main`. Working tree clean once this
-commit lands. Repo's default workflow permissions set to "write" via the API (was "read", would have
-silently made the Action's push fail otherwise, verified before and after with a GET).
+commit lands.
 
-Core engine and council: unchanged from the previous two handoffs, see git log.
+Core engine, council, and scheduled tick: unchanged from the previous handoff (see git log), all
+verified live in that session (both the "commit on real advance" and "skip on no advance" paths on
+`.github/workflows/tick.yml`).
 
-New this session, the scheduled tick (slice 4 of the original numbering):
-- `src/core/calendar.ts`: `daysSinceGenesis(genesisDateIso, now)`, pure UTC-calendar-day math, no
-  persisted counter anywhere.
-- `scripts/run-tick.ts`: `runTick(days)` (testable, pure aside from awaiting `reviewDay`) recomputes
-  the whole history from `DEFAULT_CONFIG.seed` every run and reviews each day's incidents as they are
-  produced. `main()` (guarded by `import.meta.main`, so importing the module for tests never triggers
-  it) calls it with `daysSinceGenesis(GENESIS_DATE, new Date())` and writes `data/latest.json`, values
-  rounded to 2 decimals for readable diffs.
-- `GENESIS_DATE = '2026-09-21'`, today. The sim's day 0 is today; the Action will start producing real
-  incidents once enough days pass for carriers to drift below the corruption threshold (`DEFAULT_CONFIG`
-  puts that a handful of days out for the carriers that start corrupt-leaning).
-- `.github/workflows/tick.yml`: daily cron (`17 3 * * *`, an arbitrary off-the-hour time) plus
-  `workflow_dispatch` for manual runs. Runs `bun test` before `bun run tick`, so a broken engine fails
-  the workflow instead of committing bad data. Commits as `github-actions[bot]` with the real bot id
-  email, never an invented `<name>@users.noreply.github.com` (a past session found that pattern can
-  collide with a real unrelated GitHub account, see `reference/github-profile-readme.md` in memory).
+New this session, the static dashboard (triggered by a direct user request to see the sim visually and
+get a data report, not by the original slice ordering, which had this after the network graph in the
+brief; the ordering note about "do not gold-plate before the core loop works" no longer applies since
+the core loop is already proven live):
 
-Tests: 74 passing (`bun test`), typecheck clean. Verified by running both, and by actually running
-`bun run tick` locally and inspecting `data/latest.json`'s shape and precision before committing it.
+- `scripts/build-site.ts`: `buildSiteData(snapshot, config)`, a pure function tested in
+  `build-site.test.ts` (6 tests: stat computation, histogram bucketing, per-lane carrier counts, the
+  null-win-rate-with-no-history case, the real-win-rate case, and outcome derivation on a synthetic
+  incident/verdict pair). `main()` reads `data/latest.json` and writes `docs/data.js` as a plain
+  `window.SHADOW_DATA = {...}` assignment, not a `.json` file, so `docs/index.html` can load it via
+  `<script src="data.js">` and work identically double-clicked locally (file:// blocks `fetch()` of a
+  sibling JSON file under CORS) or served by GitHub Pages.
+- `docs/index.html`: dark/terminal-styled dashboard (Tailwind CDN + Chart.js CDN, matching the
+  `WORD//WORD` naming convention's implied aesthetic from the rest of the portfolio). Stat cards,
+  a plain-language data-report list, a legitimacy-score histogram, the leaderboard trend line chart
+  (with an honest empty state, not an empty chart, when there is no reviewed history yet), today's
+  incidents and verdicts tables (same honest empty state), and a lanes-by-risk table. No em-dashes even
+  as UI placeholder characters for "n/a": used the literal string `n/a` instead, per the hard rule.
+- `package.json`: added `"build-site": "bun run scripts/build-site.ts"`.
+- `.github/workflows/tick.yml`: added a `bun run build-site` step right after `bun run tick`, and
+  `docs/data.js` to the commit's `git add` alongside `data/latest.json`, so the dashboard is never more
+  than a day stale.
+- GitHub Pages: created via the API (`POST /repos/.../pages`, `{"source":{"branch":"main","path":"/docs"}}`),
+  confirmed `404` beforehand (no prior Pages config) and `201` on creation, live URL
+  `https://jeevan-0508.github.io/shadow-network/`.
+- README: added the live dashboard link at top, a "How the dashboard works" section, and updated the
+  roadmap's slice 5 to **Done** (case-detail/replay view and the network graph are explicitly still not
+  done, do not imply otherwise).
 
-**Verified live, not just locally**: dispatched `.github/workflows/tick.yml` manually via the API
-right after pushing it. Run `35530866320` went green, and `github-actions[bot]` actually pushed commit
-`f417900` ("Daily tick: day 0") to `main`, confirmed by reading `GET /repos/.../commits` afterward, not
-just trusting the workflow's own success status (a green run that silently skipped the commit step
-would have looked identical from status alone).
+Tests: 80 passing (`bun test`, up from 74), typecheck clean.
 
-**Caught and fixed a real bug from that same verification run**: the commit-skip check compared the
-whole `data/latest.json` file, including `generatedAt`, which changes every run. That made the "skip if
-nothing changed" branch dead code: it would commit a noisy timestamp-only diff on every manual
-re-dispatch of the same sim day. Fixed by comparing the `day` field specifically, read before and after
-the tick step.
+**Verified functionally, not by screenshot**: the `browser` tool's screenshot capture returned the
+desktop wallpaper instead of the browser panel's actual content in this environment (tried twice, both
+times identical unrelated wallpaper image, not a rendering failure of the page itself). Verified instead
+via `browser content` (full rendered text matched the real day-0 data: 120/120 carriers, avg legitimacy
+80.5, all empty states correctly showing "no incidents/verdicts/reviewed events yet") and `browser eval`
+(confirmed `Chart` is defined, `window.SHADOW_DATA` loaded, the incidents table's `hidden` class is
+applied, and exactly 24 lane rows rendered, matching `laneCount: 24`). Ran a local Bun static server on
+`localhost:8934` serving `docs/` to do this, then killed that background task once done; it is not part
+of the shipped repo.
 
-**Re-verified live after the fix**: dispatched run `35531018075` on the fixed workflow. All steps
-succeeded, including the commit step, and `GET /repos/.../commits` afterward confirmed no new commit
-landed on top of the fix commit itself (`9ce8f27`), meaning the day-0-to-day-0 re-run correctly produced
-no push. Both the "commit on a real advance" and "skip on no advance" paths are now proven live, not
-just locally.
-
-**Not started**: any UI, network graph, playable mode, multi-model council.
+**Not yet verified**: whether the actual GitHub Pages deployment (as opposed to the local file content)
+serves correctly. Do this immediately after pushing: GitHub Pages builds typically take under a minute;
+poll `GET /repos/Jeevan-0508/shadow-network/pages/builds/latest` once, then `curl` the live URL and grep
+for a real data value (e.g. `"totalCarriers": 120`) in the response, not just a 200 status, since a
+stale cached or default Pages placeholder page would also 200.
 
 ## Next action
 
-1. Slice 5: the static site. Leaderboard trend chart reading `data/latest.json`'s
-   `leaderboard` array, a case list from `todaysIncidents` (there will not be much real history until
-   the Action has run for a number of days, which is fine and honest: an early README screenshot should
-   say so rather than staging a fake multi-week history).
-2. Slice 6 (network graph) and slice 7 (playable mode) come after the site's core views exist, per the
-   brief's ordering. Do not gold-plate the leaderboard/case views before the network graph exists either,
-   per "do not gold-plate early pieces before the core loop works end to end" (the core loop is now
-   proven end to end, live on GitHub, both the commit and the skip path; the site is the next thing that
-   has to actually be seen to work).
+1. Push this commit, then verify the live Pages URL serves real content (see above), not just local
+   `docs/index.html`.
+2. Take an actual screenshot once a working capture method is confirmed (try again in a future session;
+   the tool may work in a different environment/session even though it did not here), and add it to the
+   README per the existing convention ("add screenshots the moment there is a running site to
+   screenshot").
+3. Message the lead (thread `1789928915465-49`) with the live dashboard URL once step 1 confirms it
+   actually works, not before.
+4. After that: case-detail view with full replay/lineage (click an incident, see its `causalTrace`,
+   the brief the council actually saw, and the verdict), then the force-directed network graph for
+   collusion rings, per the original roadmap ordering, unless the user's next message points somewhere
+   else first (this session already deviated from the brief's ordering once, on direct request, and
+   that is the correct call to make again if asked).
 
-Add screenshots to the README the moment there is a running site to screenshot, not before.
+## Standing constraints, unchanged
+
+- `GENESIS_DATE = '2026-09-21'` in `scripts/run-tick.ts`: never change once live.
+- `DEFAULT_CONFIG.seed = 'shadow-network-genesis'` in `src/core/model.ts`: never change once live.
+- Zero em dashes anywhere, including generated UI strings (grep for the em dash character after every doc/UI edit).
+- `github-actions[bot]` commit identity: never invent a different bot email.
+- Always `rm -f tsconfig.tsbuildinfo` after `bun run typecheck`, before committing.

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHADOW//NETWORK</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<style>
+  body { background: #0a0e0c; color: #d7ffe0; font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, Consolas, monospace; }
+  .panel { background: #0f1512; border: 1px solid #1f3a2a; }
+  .accent { color: #4ade80; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid #1f3a2a; padding: 6px 10px; text-align: left; font-size: 0.85rem; }
+  th { color: #86efac; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+  .badge-fraud { background: #7f1d1d; color: #fecaca; }
+  .badge-benign { background: #14532d; color: #bbf7d0; }
+  .badge-catch { background: #14532d; color: #bbf7d0; }
+  .badge-correct_clear { background: #14532d; color: #bbf7d0; }
+  .badge-miss { background: #7f1d1d; color: #fecaca; }
+  .badge-false_positive { background: #78350f; color: #fed7aa; }
+</style>
+</head>
+<body class="px-4 py-8 max-w-5xl mx-auto">
+
+<header class="mb-8">
+  <h1 class="text-3xl font-bold accent tracking-tight">SHADOW<span class="text-gray-500">//</span>NETWORK</h1>
+  <p class="text-gray-400 text-sm mt-1">A persistent synthetic freight-carrier economy, watched by a BYOK AI investigator council.</p>
+  <div class="flex gap-4 mt-3 text-xs text-gray-500">
+    <a class="hover:accent underline" href="https://github.com/Jeevan-0508/shadow-network" target="_blank">repo</a>
+    <a class="hover:accent underline" href="https://github.com/Jeevan-0508/shadow-network/blob/main/data/latest.json" target="_blank">raw data</a>
+    <a class="hover:accent underline" href="https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml" target="_blank">daily tick action</a>
+  </div>
+</header>
+
+<section id="meta" class="mb-8 text-sm text-gray-400"></section>
+
+<section class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8" id="stats"></section>
+
+<section class="panel rounded-lg p-5 mb-8">
+  <h2 class="accent font-semibold mb-3 text-sm uppercase tracking-wide">Data report</h2>
+  <ul id="report" class="space-y-2 text-sm text-gray-300 list-disc list-inside"></ul>
+</section>
+
+<section class="grid md:grid-cols-2 gap-6 mb-8">
+  <div class="panel rounded-lg p-5">
+    <h2 class="accent font-semibold mb-3 text-sm uppercase tracking-wide">Carrier legitimacy distribution</h2>
+    <canvas id="histogramChart" height="220"></canvas>
+  </div>
+  <div class="panel rounded-lg p-5">
+    <h2 class="accent font-semibold mb-3 text-sm uppercase tracking-wide">AI vs fraud, cumulative win rate</h2>
+    <canvas id="trendChart" height="220"></canvas>
+    <p id="trendEmpty" class="text-gray-500 text-sm hidden">No events reviewed yet. This chart populates once the first incidents fire and the council reviews them.</p>
+  </div>
+</section>
+
+<section class="panel rounded-lg p-5 mb-8">
+  <h2 class="accent font-semibold mb-3 text-sm uppercase tracking-wide">Today's flagged events</h2>
+  <table id="incidentsTable"><thead><tr>
+    <th>ID</th><th>Severity</th><th>Category</th><th>Carriers</th><th>Lane</th><th>Ground truth</th>
+  </tr></thead><tbody></tbody></table>
+  <p id="incidentsEmpty" class="text-gray-500 text-sm mt-3 hidden">No flagged events today.</p>
+</section>
+
+<section class="panel rounded-lg p-5 mb-8">
+  <h2 class="accent font-semibold mb-3 text-sm uppercase tracking-wide">Today's council verdicts</h2>
+  <table id="verdictsTable"><thead><tr>
+    <th>Event</th><th>Decision</th><th>Confidence</th><th>Outcome</th><th>Reasoning</th>
+  </tr></thead><tbody></tbody></table>
+  <p id="verdictsEmpty" class="text-gray-500 text-sm mt-3 hidden">No verdicts today.</p>
+</section>
+
+<section class="panel rounded-lg p-5 mb-8">
+  <h2 class="accent font-semibold mb-3 text-sm uppercase tracking-wide">Lanes, by risk baseline</h2>
+  <table id="lanesTable"><thead><tr>
+    <th>Lane</th><th>Origin</th><th>Destination</th><th>Region</th><th>Risk baseline</th><th>Carriers</th>
+  </tr></thead><tbody></tbody></table>
+</section>
+
+<footer class="text-gray-600 text-xs mt-10 pb-8">
+  Rebuilt once a day by the same GitHub Action that ticks the sim. Static site, no backend, no tracking.
+</footer>
+
+<script src="data.js"></script>
+<script>
+const d = window.SHADOW_DATA;
+
+document.getElementById('meta').textContent =
+  `Day ${d.day} · seed "${d.seed}" · generated ${new Date(d.generatedAt).toUTCString()}`;
+
+const statCards = [
+  ['Carriers', `${d.stats.activeCarriers} / ${d.stats.totalCarriers}`, 'active / total'],
+  ['Avg legitimacy', d.stats.avgLegitimacy, `threshold ${d.stats.corruptionThreshold}`],
+  ['Below threshold', d.stats.corruptCount, 'eligible to offend'],
+  ['Lanes', d.stats.totalLanes, ''],
+  ['Collusion links', d.stats.totalRelationships, ''],
+  ['Reviewed events', d.stats.totalReviewed, 'since genesis'],
+  ['AI win rate', d.stats.cumulativeWinRatePct === null ? 'n/a' : `${d.stats.cumulativeWinRatePct}%`, 'cumulative'],
+];
+document.getElementById('stats').innerHTML = statCards.map(([label, value, sub]) => `
+  <div class="panel rounded-lg p-4">
+    <div class="text-gray-500 text-xs uppercase tracking-wide">${label}</div>
+    <div class="text-2xl font-bold accent mt-1">${value}</div>
+    <div class="text-gray-600 text-xs mt-1">${sub}</div>
+  </div>
+`).join('');
+
+document.getElementById('report').innerHTML = d.reportText.map((line) => `<li>${line}</li>`).join('');
+
+new Chart(document.getElementById('histogramChart'), {
+  type: 'bar',
+  data: {
+    labels: d.legitimacyHistogram.map((b) => b.bucket),
+    datasets: [{ label: 'carriers', data: d.legitimacyHistogram.map((b) => b.count), backgroundColor: '#4ade80' }],
+  },
+  options: { scales: { y: { beginAtZero: true, ticks: { color: '#8a9a90' } }, x: { ticks: { color: '#8a9a90' } } }, plugins: { legend: { display: false } } },
+});
+
+if (d.leaderboardTrend.length === 0) {
+  document.getElementById('trendChart').classList.add('hidden');
+  document.getElementById('trendEmpty').classList.remove('hidden');
+} else {
+  new Chart(document.getElementById('trendChart'), {
+    type: 'line',
+    data: {
+      labels: d.leaderboardTrend.map((p) => `day ${p.day}`),
+      datasets: [{ label: 'win rate %', data: d.leaderboardTrend.map((p) => p.winRatePct), borderColor: '#4ade80', tension: 0.2 }],
+    },
+    options: { scales: { y: { min: 0, max: 100, ticks: { color: '#8a9a90' } }, x: { ticks: { color: '#8a9a90' } } }, plugins: { legend: { display: false } } },
+  });
+}
+
+const incidentsBody = document.querySelector('#incidentsTable tbody');
+if (d.incidents.length === 0) {
+  document.getElementById('incidentsTable').classList.add('hidden');
+  document.getElementById('incidentsEmpty').classList.remove('hidden');
+} else {
+  incidentsBody.innerHTML = d.incidents.map((e) => `
+    <tr>
+      <td>${e.id}</td>
+      <td>${e.severity}</td>
+      <td>${e.category ?? 'n/a'}</td>
+      <td>${e.carrierIds.join(', ')}</td>
+      <td>${e.laneId}</td>
+      <td><span class="badge badge-${e.groundTruthLabel}">${e.groundTruthLabel}</span></td>
+    </tr>
+  `).join('');
+}
+
+const verdictsBody = document.querySelector('#verdictsTable tbody');
+if (d.verdicts.length === 0) {
+  document.getElementById('verdictsTable').classList.add('hidden');
+  document.getElementById('verdictsEmpty').classList.remove('hidden');
+} else {
+  verdictsBody.innerHTML = d.verdicts.map((v) => `
+    <tr>
+      <td>${v.eventId}</td>
+      <td>${v.decision}</td>
+      <td>${(v.confidence * 100).toFixed(0)}%</td>
+      <td><span class="badge badge-${v.outcome}">${v.outcome.replace('_', ' ')}</span></td>
+      <td class="text-gray-400">${v.reasoning}</td>
+    </tr>
+  `).join('');
+}
+
+document.querySelector('#lanesTable tbody').innerHTML = d.lanes.map((l) => `
+  <tr>
+    <td>${l.id}</td>
+    <td>${l.origin}</td>
+    <td>${l.destination}</td>
+    <td>${l.region}</td>
+    <td>${l.riskBaseline.toFixed(2)}</td>
+    <td>${l.carrierCount}</td>
+  </tr>
+`).join('');
+</script>
+</body>
+</html>

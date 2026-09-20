@@ -9,7 +9,8 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "typecheck": "tsc -b --noEmit",
-    "tick": "bun run scripts/run-tick.ts"
+    "tick": "bun run scripts/run-tick.ts",
+    "build-site": "bun run scripts/build-site.ts"
   },
   "devDependencies": {
     "@types/bun": "^1.4.2",
