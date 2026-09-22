@@ -137,6 +137,7 @@ function fireIncidents(
         causalTrace.push(`Existing collusion relationship with ${partnerId} made pattern ${pattern.id} (${pattern.name}) eligible.`);
       }
       causalTrace.push(`Pattern ${pattern.id} (${pattern.name}, category ${pattern.category}) selected and fired.`);
+      causalTrace.push(`Detection signal observed: ${rngPick(rng, pattern.signals)}`);
 
       incidents.push({
         id: `INC-${day}-${incidents.length + 1}`,
