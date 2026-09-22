@@ -1,17 +1,24 @@
+<p align="center"><img src="assets/jk-brand-banner.png" alt="Jeevan Siddhabhaktula: Risk. Governance. AI." width="280"></p>
+
+<div align="center">
+
 # SHADOW//NETWORK
 
-[![Daily tick](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml/badge.svg)](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml)
+**A persistent, synthetic freight-carrier economy that advances one day at a time.**
+Carrier agents drift corrupt over time, some form collusion rings and commit incidents drawn
+from a real fraud taxonomy, and a BYOK AI investigator council reviews the flagged activity
+and opens cases. A public leaderboard tracks AI vs fraud win rate across the sim's whole history.
 
-**Live dashboard:** [jeevan-0508.github.io/shadow-network](https://jeevan-0508.github.io/shadow-network/)
-**Repo:** [github.com/Jeevan-0508/shadow-network](https://github.com/Jeevan-0508/shadow-network)
+[![Live Dashboard](https://img.shields.io/badge/Live%20Dashboard-jeevan--0508.github.io-38bdf8?style=for-the-badge)](https://jeevan-0508.github.io/shadow-network/)
+[![Daily Tick](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml/badge.svg?style=for-the-badge)](https://github.com/Jeevan-0508/shadow-network/actions/workflows/tick.yml)
+[![Tests](https://img.shields.io/badge/Tests-80%2F80_passing-22c55e?style=for-the-badge)](src)
+[![Stack](https://img.shields.io/badge/Stack-TypeScript%20%7C%20GitHub%20Actions%20%7C%20BYOK-818cf8?style=for-the-badge)](#how-the-engine-works)
+
+</div>
+
 **Live tick data:** [data/latest.json](https://github.com/Jeevan-0508/shadow-network/blob/main/data/latest.json)
-commits automatically once a day, badge above tracks whether that run is currently green, and the
-dashboard rebuilds from it every run.
-
-A persistent, synthetic freight-carrier economy that advances one day at a time. Carrier agents drift
-corrupt over time, some form collusion rings and commit incidents drawn from a real fraud taxonomy, and
-a BYOK AI investigator council reviews the flagged activity and opens cases. A public leaderboard tracks
-AI vs fraud win rate across the sim's whole history.
+commits automatically once a day, the Daily Tick badge above tracks whether that run is currently
+green, and the dashboard rebuilds from it every run.
 
 Status: core simulation engine, BYOK AI council, scheduled daily tick and a static dashboard are all
 working end to end and verified live on GitHub. The sim just went live today (day 0), so the dashboard
@@ -77,6 +84,50 @@ and a short plain-language "data report" (carrier counts, drift, incidents, win 
 plus the leaderboard trend and today's incidents/verdicts tables straight from the snapshot. The daily
 tick Action runs this after `bun run tick` and commits `docs/data.js` alongside `data/latest.json`, so
 the dashboard is never more than a day stale. Run it locally: `bun run build-site`.
+
+## Architecture
+
+```mermaid
+flowchart TD
+    CAL["src/core/calendar.ts
+daysSinceGenesis(today)"] --> GEN["src/core/genesis.ts
+createGenesisState(seed)"]
+    GEN --> TICK["src/core/tick.ts
+tickDay(state, config) x N days
+pure, deterministic, replays identically"]
+    TICK --> TAX["src/core/taxonomy.ts
+real fraud patterns"]
+
+    subgraph COUNCIL["src/core/council/"]
+        CB["case.ts
+buildCaseBrief: redacts ground truth"]
+        RV["deterministic.ts
+ruleBasedVerdict: zero-cost, always on"]
+        LLM["llm.ts
+createLlmReasoner: optional BYOK
+falls back safely on any failure"]
+        OUT["outcome.ts
+deriveOutcome: catch / miss / FP / clear"]
+        LB["leaderboard.ts
+buildLeaderboard: AI vs fraud win rate"]
+    end
+
+    TICK --> CB --> RV --> OUT
+    CB -.optional override.-> LLM --> OUT
+    OUT --> LB
+
+    subgraph DAILY["Once a day, .github/workflows/tick.yml"]
+        RT["scripts/run-tick.ts
+recomputes whole history from seed"]
+        LATEST["data/latest.json"]
+        BS["scripts/build-site.ts"]
+        DD["docs/data.js
+window.SHADOW_DATA"]
+    end
+
+    LB --> RT --> LATEST --> BS --> DD --> DASH["docs/index.html
+static dashboard"]
+```
 
 ## Roadmap
 
