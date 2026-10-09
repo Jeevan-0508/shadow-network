@@ -1,6 +1,6 @@
 window.SHADOW_DATA = {
-  "day": 17,
-  "generatedAt": "2026-10-08T10:43:46.978Z",
+  "day": 18,
+  "generatedAt": "2026-10-09T10:42:35.930Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
@@ -11,7 +11,7 @@ window.SHADOW_DATA = {
     "corruptionThreshold": 35,
     "totalLanes": 24,
     "totalRelationships": 0,
-    "totalReviewed": 7,
+    "totalReviewed": 8,
     "cumulativeWinRatePct": 100
   },
   "legitimacyHistogram": [
@@ -25,11 +25,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "20-29",
-      "count": 1
+      "count": 2
     },
     {
       "bucket": "30-39",
-      "count": 2
+      "count": 1
     },
     {
       "bucket": "40-49",
@@ -45,15 +45,15 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "70-79",
-      "count": 39
+      "count": 38
     },
     {
       "bucket": "80-89",
-      "count": 21
+      "count": 23
     },
     {
       "bucket": "90-100",
-      "count": 44
+      "count": 43
     }
   ],
   "leaderboardTrend": [
@@ -115,6 +115,16 @@ window.SHADOW_DATA = {
       "correctClears": 1,
       "totalReviewed": 7,
       "cumulativeWins": 7,
+      "winRatePct": 100
+    },
+    {
+      "day": 18,
+      "catches": 0,
+      "misses": 0,
+      "falsePositives": 0,
+      "correctClears": 1,
+      "totalReviewed": 8,
+      "cumulativeWins": 8,
       "winRatePct": 100
     }
   ],
@@ -314,37 +324,37 @@ window.SHADOW_DATA = {
   ],
   "incidents": [
     {
-      "id": "INC-17-1",
-      "day": 17,
+      "id": "INC-18-1",
+      "day": 18,
       "kind": "anomaly",
       "severity": "low",
       "carrierIds": [
-        "CAR-0008"
+        "CAR-0096"
       ],
-      "laneId": "LN-019",
+      "laneId": "LN-020",
       "groundTruthFraud": false,
       "causalTrace": [
-        "Carrier CAR-0008 legitimacy 48.8 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-019 tripped a detection rule with no corroborating signal."
+        "Carrier CAR-0096 legitimacy 73.3 is well above the corruption threshold.",
+        "A one-off operational anomaly on lane LN-020 tripped a detection rule with no corroborating signal."
       ],
       "groundTruthLabel": "benign"
     }
   ],
   "verdicts": [
     {
-      "eventId": "INC-17-1",
+      "eventId": "INC-18-1",
       "decision": "clear",
-      "confidence": 0.77,
-      "reasoning": "CAR-0008 shows an average legitimacy signal of 48.8 on a low severity flag. Recommending clear.",
+      "confidence": 0.86,
+      "reasoning": "CAR-0096 shows an average legitimacy signal of 73.3 on a low severity flag. Recommending clear.",
       "outcome": "correct_clear"
     }
   ],
   "reportText": [
-    "Day 17 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-08T10:43:46.978Z.",
+    "Day 18 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-09T10:42:35.930Z.",
     "120 carriers (120 active, 0 exited) across 24 lanes. Average legitimacy score 80.1.",
     "4 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
     "1 new flagged event(s) today: 0 fraud pattern(s), 1 benign anomaly/anomalies.",
-    "Across 7 reviewed event(s) since genesis, the AI council's cumulative win rate is 100%.",
+    "Across 8 reviewed event(s) since genesis, the AI council's cumulative win rate is 100%.",
     "No collusion relationships have formed between carriers yet."
   ]
 };
