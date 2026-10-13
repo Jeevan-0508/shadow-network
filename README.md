@@ -16,6 +16,8 @@ and opens cases. A public leaderboard tracks AI vs fraud win rate across the sim
 
 </div>
 
+<p align="center"><a href="docs/getting-started.md">Getting started</a> · <a href="docs/quality-review.md">Quality review</a></p>
+
 **Live tick data:** [data/latest.json](https://github.com/Jeevan-0508/shadow-network/blob/main/data/latest.json)
 commits automatically once a day, the Daily Tick badge above tracks whether that run is currently
 green, and the dashboard rebuilds from it every run.
