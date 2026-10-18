@@ -1,11 +1,11 @@
 window.SHADOW_DATA = {
-  "day": 26,
-  "generatedAt": "2026-10-17T07:54:24.254Z",
+  "day": 27,
+  "generatedAt": "2026-10-18T08:08:45.331Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
-    "activeCarriers": 120,
-    "exitedCarriers": 0,
+    "activeCarriers": 119,
+    "exitedCarriers": 1,
     "avgLegitimacy": 80,
     "corruptCount": 4,
     "corruptionThreshold": 35,
@@ -33,11 +33,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "40-49",
-      "count": 7
+      "count": 8
     },
     {
       "bucket": "50-59",
-      "count": 3
+      "count": 2
     },
     {
       "bucket": "60-69",
@@ -372,38 +372,13 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [
-    {
-      "id": "INC-26-1",
-      "day": 26,
-      "kind": "anomaly",
-      "severity": "low",
-      "carrierIds": [
-        "CAR-0064"
-      ],
-      "laneId": "LN-009",
-      "groundTruthFraud": false,
-      "causalTrace": [
-        "Carrier CAR-0064 legitimacy 89.9 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-009 tripped a detection rule with no corroborating signal."
-      ],
-      "groundTruthLabel": "benign"
-    }
-  ],
-  "verdicts": [
-    {
-      "eventId": "INC-26-1",
-      "decision": "clear",
-      "confidence": 0.91,
-      "reasoning": "CAR-0064 shows an average legitimacy signal of 89.9 on a low severity flag. Recommending clear.",
-      "outcome": "correct_clear"
-    }
-  ],
+  "incidents": [],
+  "verdicts": [],
   "reportText": [
-    "Day 26 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-17T07:54:24.254Z.",
-    "120 carriers (120 active, 0 exited) across 24 lanes. Average legitimacy score 80.",
+    "Day 27 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-18T08:08:45.331Z.",
+    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 80.",
     "4 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "1 new flagged event(s) today: 0 fraud pattern(s), 1 benign anomaly/anomalies.",
+    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
     "Across 15 reviewed event(s) since genesis, the AI council's cumulative win rate is 100%.",
     "No collusion relationships have formed between carriers yet."
   ]
