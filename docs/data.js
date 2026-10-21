@@ -1,12 +1,12 @@
 window.SHADOW_DATA = {
-  "day": 29,
-  "generatedAt": "2026-10-20T08:40:53.798Z",
+  "day": 30,
+  "generatedAt": "2026-10-21T08:41:58.956Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
     "activeCarriers": 119,
     "exitedCarriers": 1,
-    "avgLegitimacy": 79.9,
+    "avgLegitimacy": 79.8,
     "corruptCount": 4,
     "corruptionThreshold": 35,
     "totalLanes": 24,
@@ -41,19 +41,19 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "60-69",
-      "count": 3
+      "count": 4
     },
     {
       "bucket": "70-79",
-      "count": 35
+      "count": 32
     },
     {
       "bucket": "80-89",
-      "count": 23
+      "count": 26
     },
     {
       "bucket": "90-100",
-      "count": 45
+      "count": 44
     }
   ],
   "leaderboardTrend": [
@@ -385,8 +385,8 @@ window.SHADOW_DATA = {
   "incidents": [],
   "verdicts": [],
   "reportText": [
-    "Day 29 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-20T08:40:53.798Z.",
-    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.9.",
+    "Day 30 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-21T08:41:58.956Z.",
+    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.8.",
     "4 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
     "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
     "Across 17 reviewed event(s) since genesis, the AI council's cumulative win rate is 100%.",
