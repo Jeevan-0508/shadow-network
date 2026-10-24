@@ -1,18 +1,18 @@
 window.SHADOW_DATA = {
-  "day": 32,
-  "generatedAt": "2026-10-23T08:39:49.745Z",
+  "day": 33,
+  "generatedAt": "2026-10-24T08:14:55.183Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
     "activeCarriers": 119,
     "exitedCarriers": 1,
-    "avgLegitimacy": 79.8,
+    "avgLegitimacy": 79.9,
     "corruptCount": 4,
     "corruptionThreshold": 35,
     "totalLanes": 24,
     "totalRelationships": 0,
-    "totalReviewed": 17,
-    "cumulativeWinRatePct": 100
+    "totalReviewed": 18,
+    "cumulativeWinRatePct": 94.4
   },
   "legitimacyHistogram": [
     {
@@ -21,11 +21,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "10-19",
-      "count": 1
+      "count": 2
     },
     {
       "bucket": "20-29",
-      "count": 1
+      "count": 0
     },
     {
       "bucket": "30-39",
@@ -49,11 +49,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "80-89",
-      "count": 29
+      "count": 28
     },
     {
       "bucket": "90-100",
-      "count": 42
+      "count": 43
     }
   ],
   "leaderboardTrend": [
@@ -186,6 +186,16 @@ window.SHADOW_DATA = {
       "totalReviewed": 17,
       "cumulativeWins": 17,
       "winRatePct": 100
+    },
+    {
+      "day": 33,
+      "catches": 0,
+      "misses": 1,
+      "falsePositives": 0,
+      "correctClears": 0,
+      "totalReviewed": 18,
+      "cumulativeWins": 17,
+      "winRatePct": 94.4
     }
   ],
   "lanes": [
@@ -382,14 +392,43 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [],
-  "verdicts": [],
+  "incidents": [
+    {
+      "id": "INC-33-1",
+      "day": 33,
+      "kind": "fraud",
+      "patternId": "FFT-005",
+      "category": "cargo_loss",
+      "severity": "medium",
+      "carrierIds": [
+        "CAR-0099"
+      ],
+      "laneId": "LN-007",
+      "groundTruthFraud": true,
+      "causalTrace": [
+        "Carrier CAR-0099 legitimacy 10.5 is below the corruption threshold 35.",
+        "Lane LN-007 risk baseline 0.54 scaled the incident odds this tick.",
+        "Pattern FFT-005 (Systematic Pilferage, category cargo_loss) selected and fired.",
+        "Detection signal observed: Shortage quantities sit consistently just below the threshold that would trigger a formal investigation"
+      ],
+      "groundTruthLabel": "fraud"
+    }
+  ],
+  "verdicts": [
+    {
+      "eventId": "INC-33-1",
+      "decision": "clear",
+      "confidence": 0.54,
+      "reasoning": "CAR-0099 shows an average legitimacy signal of 10.5 on a medium severity flag. Recommending clear.",
+      "outcome": "miss"
+    }
+  ],
   "reportText": [
-    "Day 32 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-23T08:39:49.745Z.",
-    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.8.",
+    "Day 33 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-24T08:14:55.183Z.",
+    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.9.",
     "4 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
-    "Across 17 reviewed event(s) since genesis, the AI council's cumulative win rate is 100%.",
+    "1 new flagged event(s) today: 1 fraud pattern(s), 0 benign anomaly/anomalies.",
+    "Across 18 reviewed event(s) since genesis, the AI council's cumulative win rate is 94.4%.",
     "No collusion relationships have formed between carriers yet."
   ]
 };
