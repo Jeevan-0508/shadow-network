@@ -1,12 +1,12 @@
 window.SHADOW_DATA = {
-  "day": 33,
-  "generatedAt": "2026-10-24T08:14:55.183Z",
+  "day": 34,
+  "generatedAt": "2026-10-25T08:32:46.149Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
     "activeCarriers": 119,
     "exitedCarriers": 1,
-    "avgLegitimacy": 79.9,
+    "avgLegitimacy": 79.8,
     "corruptCount": 4,
     "corruptionThreshold": 35,
     "totalLanes": 24,
@@ -17,11 +17,11 @@ window.SHADOW_DATA = {
   "legitimacyHistogram": [
     {
       "bucket": "0-9",
-      "count": 2
+      "count": 3
     },
     {
       "bucket": "10-19",
-      "count": 2
+      "count": 1
     },
     {
       "bucket": "20-29",
@@ -392,42 +392,13 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [
-    {
-      "id": "INC-33-1",
-      "day": 33,
-      "kind": "fraud",
-      "patternId": "FFT-005",
-      "category": "cargo_loss",
-      "severity": "medium",
-      "carrierIds": [
-        "CAR-0099"
-      ],
-      "laneId": "LN-007",
-      "groundTruthFraud": true,
-      "causalTrace": [
-        "Carrier CAR-0099 legitimacy 10.5 is below the corruption threshold 35.",
-        "Lane LN-007 risk baseline 0.54 scaled the incident odds this tick.",
-        "Pattern FFT-005 (Systematic Pilferage, category cargo_loss) selected and fired.",
-        "Detection signal observed: Shortage quantities sit consistently just below the threshold that would trigger a formal investigation"
-      ],
-      "groundTruthLabel": "fraud"
-    }
-  ],
-  "verdicts": [
-    {
-      "eventId": "INC-33-1",
-      "decision": "clear",
-      "confidence": 0.54,
-      "reasoning": "CAR-0099 shows an average legitimacy signal of 10.5 on a medium severity flag. Recommending clear.",
-      "outcome": "miss"
-    }
-  ],
+  "incidents": [],
+  "verdicts": [],
   "reportText": [
-    "Day 33 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-24T08:14:55.183Z.",
-    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.9.",
+    "Day 34 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-25T08:32:46.149Z.",
+    "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.8.",
     "4 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "1 new flagged event(s) today: 1 fraud pattern(s), 0 benign anomaly/anomalies.",
+    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
     "Across 18 reviewed event(s) since genesis, the AI council's cumulative win rate is 94.4%.",
     "No collusion relationships have formed between carriers yet."
   ]
