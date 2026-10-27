@@ -1,6 +1,6 @@
 window.SHADOW_DATA = {
-  "day": 35,
-  "generatedAt": "2026-10-26T09:06:37.419Z",
+  "day": 36,
+  "generatedAt": "2026-10-27T09:08:35.927Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
@@ -45,15 +45,15 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "70-79",
-      "count": 30
+      "count": 31
     },
     {
       "bucket": "80-89",
-      "count": 27
+      "count": 28
     },
     {
       "bucket": "90-100",
-      "count": 44
+      "count": 42
     }
   ],
   "leaderboardTrend": [
@@ -402,38 +402,13 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [
-    {
-      "id": "INC-35-1",
-      "day": 35,
-      "kind": "anomaly",
-      "severity": "low",
-      "carrierIds": [
-        "CAR-0018"
-      ],
-      "laneId": "LN-023",
-      "groundTruthFraud": false,
-      "causalTrace": [
-        "Carrier CAR-0018 legitimacy 99.2 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-023 tripped a detection rule with no corroborating signal."
-      ],
-      "groundTruthLabel": "benign"
-    }
-  ],
-  "verdicts": [
-    {
-      "eventId": "INC-35-1",
-      "decision": "clear",
-      "confidence": 0.95,
-      "reasoning": "CAR-0018 shows an average legitimacy signal of 99.2 on a low severity flag. Recommending clear.",
-      "outcome": "correct_clear"
-    }
-  ],
+  "incidents": [],
+  "verdicts": [],
   "reportText": [
-    "Day 35 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-26T09:06:37.419Z.",
+    "Day 36 of the simulation (seed \"shadow-network-genesis\"), generated 2026-10-27T09:08:35.927Z.",
     "120 carriers (119 active, 1 exited) across 24 lanes. Average legitimacy score 79.8.",
     "4 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "1 new flagged event(s) today: 0 fraud pattern(s), 1 benign anomaly/anomalies.",
+    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
     "Across 19 reviewed event(s) since genesis, the AI council's cumulative win rate is 94.7%.",
     "No collusion relationships have formed between carriers yet."
   ]
