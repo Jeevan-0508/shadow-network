@@ -1,6 +1,6 @@
 window.SHADOW_DATA = {
-  "day": 44,
-  "generatedAt": "2026-11-04T11:08:54.516Z",
+  "day": 45,
+  "generatedAt": "2026-11-05T11:08:46.525Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
@@ -41,19 +41,19 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "60-69",
-      "count": 6
+      "count": 7
     },
     {
       "bucket": "70-79",
-      "count": 28
+      "count": 27
     },
     {
       "bucket": "80-89",
-      "count": 28
+      "count": 27
     },
     {
       "bucket": "90-100",
-      "count": 44
+      "count": 45
     }
   ],
   "leaderboardTrend": [
@@ -405,7 +405,7 @@ window.SHADOW_DATA = {
   "incidents": [],
   "verdicts": [],
   "reportText": [
-    "Day 44 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-04T11:08:54.516Z.",
+    "Day 45 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-05T11:08:46.525Z.",
     "120 carriers (117 active, 3 exited) across 24 lanes. Average legitimacy score 79.7.",
     "6 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
     "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
