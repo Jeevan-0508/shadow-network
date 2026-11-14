@@ -1,6 +1,6 @@
 window.SHADOW_DATA = {
-  "day": 53,
-  "generatedAt": "2026-11-13T11:12:06.502Z",
+  "day": 54,
+  "generatedAt": "2026-11-14T10:38:35.521Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
@@ -425,7 +425,7 @@ window.SHADOW_DATA = {
   "incidents": [],
   "verdicts": [],
   "reportText": [
-    "Day 53 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-13T11:12:06.502Z.",
+    "Day 54 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-14T10:38:35.521Z.",
     "120 carriers (116 active, 4 exited) across 24 lanes. Average legitimacy score 79.4.",
     "6 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
     "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
