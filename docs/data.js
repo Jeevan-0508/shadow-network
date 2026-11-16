@@ -1,6 +1,6 @@
 window.SHADOW_DATA = {
-  "day": 55,
-  "generatedAt": "2026-11-15T11:10:51.895Z",
+  "day": 56,
+  "generatedAt": "2026-11-16T11:41:08.535Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
@@ -11,8 +11,8 @@ window.SHADOW_DATA = {
     "corruptionThreshold": 35,
     "totalLanes": 24,
     "totalRelationships": 0,
-    "totalReviewed": 21,
-    "cumulativeWinRatePct": 95.2
+    "totalReviewed": 22,
+    "cumulativeWinRatePct": 95.5
   },
   "legitimacyHistogram": [
     {
@@ -29,11 +29,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "30-39",
-      "count": 1
+      "count": 2
     },
     {
       "bucket": "40-49",
-      "count": 7
+      "count": 6
     },
     {
       "bucket": "50-59",
@@ -45,11 +45,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "70-79",
-      "count": 26
+      "count": 25
     },
     {
       "bucket": "80-89",
-      "count": 28
+      "count": 29
     },
     {
       "bucket": "90-100",
@@ -226,6 +226,16 @@ window.SHADOW_DATA = {
       "totalReviewed": 21,
       "cumulativeWins": 20,
       "winRatePct": 95.2
+    },
+    {
+      "day": 56,
+      "catches": 0,
+      "misses": 0,
+      "falsePositives": 0,
+      "correctClears": 1,
+      "totalReviewed": 22,
+      "cumulativeWins": 21,
+      "winRatePct": 95.5
     }
   ],
   "lanes": [
@@ -422,14 +432,39 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [],
-  "verdicts": [],
+  "incidents": [
+    {
+      "id": "INC-56-1",
+      "day": 56,
+      "kind": "anomaly",
+      "severity": "low",
+      "carrierIds": [
+        "CAR-0001"
+      ],
+      "laneId": "LN-001",
+      "groundTruthFraud": false,
+      "causalTrace": [
+        "Carrier CAR-0001 legitimacy 81.5 is well above the corruption threshold.",
+        "A one-off operational anomaly on lane LN-001 tripped a detection rule with no corroborating signal."
+      ],
+      "groundTruthLabel": "benign"
+    }
+  ],
+  "verdicts": [
+    {
+      "eventId": "INC-56-1",
+      "decision": "clear",
+      "confidence": 0.89,
+      "reasoning": "CAR-0001 shows an average legitimacy signal of 81.5 on a low severity flag. Recommending clear.",
+      "outcome": "correct_clear"
+    }
+  ],
   "reportText": [
-    "Day 55 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-15T11:10:51.895Z.",
+    "Day 56 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-16T11:41:08.535Z.",
     "120 carriers (116 active, 4 exited) across 24 lanes. Average legitimacy score 79.3.",
     "6 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
-    "Across 21 reviewed event(s) since genesis, the AI council's cumulative win rate is 95.2%.",
+    "1 new flagged event(s) today: 0 fraud pattern(s), 1 benign anomaly/anomalies.",
+    "Across 22 reviewed event(s) since genesis, the AI council's cumulative win rate is 95.5%.",
     "No collusion relationships have formed between carriers yet."
   ]
 };
