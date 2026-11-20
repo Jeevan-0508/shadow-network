@@ -1,12 +1,12 @@
 window.SHADOW_DATA = {
-  "day": 59,
-  "generatedAt": "2026-11-19T11:51:29.409Z",
+  "day": 60,
+  "generatedAt": "2026-11-20T11:52:49.699Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
     "activeCarriers": 116,
     "exitedCarriers": 4,
-    "avgLegitimacy": 79.2,
+    "avgLegitimacy": 79.1,
     "corruptCount": 6,
     "corruptionThreshold": 35,
     "totalLanes": 24,
@@ -29,11 +29,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "30-39",
-      "count": 3
+      "count": 4
     },
     {
       "bucket": "40-49",
-      "count": 5
+      "count": 4
     },
     {
       "bucket": "50-59",
@@ -49,11 +49,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "80-89",
-      "count": 31
+      "count": 30
     },
     {
       "bucket": "90-100",
-      "count": 44
+      "count": 45
     }
   ],
   "leaderboardTrend": [
@@ -452,38 +452,13 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [
-    {
-      "id": "INC-59-1",
-      "day": 59,
-      "kind": "anomaly",
-      "severity": "low",
-      "carrierIds": [
-        "CAR-0092"
-      ],
-      "laneId": "LN-008",
-      "groundTruthFraud": false,
-      "causalTrace": [
-        "Carrier CAR-0092 legitimacy 97.8 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-008 tripped a detection rule with no corroborating signal."
-      ],
-      "groundTruthLabel": "benign"
-    }
-  ],
-  "verdicts": [
-    {
-      "eventId": "INC-59-1",
-      "decision": "clear",
-      "confidence": 0.94,
-      "reasoning": "CAR-0092 shows an average legitimacy signal of 97.8 on a low severity flag. Recommending clear.",
-      "outcome": "correct_clear"
-    }
-  ],
+  "incidents": [],
+  "verdicts": [],
   "reportText": [
-    "Day 59 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-19T11:51:29.409Z.",
-    "120 carriers (116 active, 4 exited) across 24 lanes. Average legitimacy score 79.2.",
+    "Day 60 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-20T11:52:49.699Z.",
+    "120 carriers (116 active, 4 exited) across 24 lanes. Average legitimacy score 79.1.",
     "6 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "1 new flagged event(s) today: 0 fraud pattern(s), 1 benign anomaly/anomalies.",
+    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
     "Across 24 reviewed event(s) since genesis, the AI council's cumulative win rate is 95.8%.",
     "No collusion relationships have formed between carriers yet."
   ]

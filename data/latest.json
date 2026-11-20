@@ -1,6 +1,6 @@
 {
-  "day": 59,
-  "generatedAt": "2026-11-19T11:51:29.409Z",
+  "day": 60,
+  "generatedAt": "2026-11-20T11:52:49.699Z",
   "seed": "shadow-network-genesis",
   "carriers": [
     {
@@ -8,7 +8,7 @@
       "name": "Granite Cargo BV",
       "scac": "FXYV",
       "status": "active",
-      "legitimacyScore": 81.75,
+      "legitimacyScore": 81.97,
       "driftRate": 0.13,
       "laneIds": [
         "LN-001",
@@ -22,7 +22,7 @@
       "name": "Harbor Transport Spedition",
       "scac": "RWRD",
       "status": "active",
-      "legitimacyScore": 78.47,
+      "legitimacyScore": 78.65,
       "driftRate": -0.05,
       "laneIds": [
         "LN-001"
@@ -48,7 +48,7 @@
       "name": "Summit Trucking Co",
       "scac": "CSJB",
       "status": "active",
-      "legitimacyScore": 83.44,
+      "legitimacyScore": 83.42,
       "driftRate": 0.04,
       "laneIds": [
         "LN-024",
@@ -61,7 +61,7 @@
       "name": "Cobalt Express Ltd",
       "scac": "RXRM",
       "status": "active",
-      "legitimacyScore": 67.31,
+      "legitimacyScore": 66.98,
       "driftRate": -0.03,
       "laneIds": [
         "LN-016",
@@ -75,7 +75,7 @@
       "name": "Meridian Cargo Co",
       "scac": "UFZH",
       "status": "active",
-      "legitimacyScore": 73.12,
+      "legitimacyScore": 73.48,
       "driftRate": -0.04,
       "laneIds": [
         "LN-014"
@@ -87,7 +87,7 @@
       "name": "Northern Lines SA",
       "scac": "KAOT",
       "status": "active",
-      "legitimacyScore": 99.64,
+      "legitimacyScore": 99.52,
       "driftRate": 0.23,
       "laneIds": [
         "LN-010",
@@ -100,7 +100,7 @@
       "name": "Meridian Haulage BV",
       "scac": "YJWW",
       "status": "active",
-      "legitimacyScore": 7.84,
+      "legitimacyScore": 6.67,
       "driftRate": -0.83,
       "laneIds": [
         "LN-019",
@@ -113,7 +113,7 @@
       "name": "Ridgeline Cargo SA",
       "scac": "THDR",
       "status": "active",
-      "legitimacyScore": 73.9,
+      "legitimacyScore": 73.54,
       "driftRate": -0.04,
       "laneIds": [
         "LN-009",
@@ -126,7 +126,7 @@
       "name": "Meridian Express Inc",
       "scac": "EQVH",
       "status": "active",
-      "legitimacyScore": 72.48,
+      "legitimacyScore": 72.95,
       "driftRate": 0.03,
       "laneIds": [
         "LN-021",
@@ -140,7 +140,7 @@
       "name": "Anchor Express Co",
       "scac": "GELX",
       "status": "active",
-      "legitimacyScore": 95,
+      "legitimacyScore": 94.98,
       "driftRate": 0.06,
       "laneIds": [
         "LN-017",
@@ -153,7 +153,7 @@
       "name": "Falcon Freight Co",
       "scac": "ZAVR",
       "status": "active",
-      "legitimacyScore": 88.2,
+      "legitimacyScore": 88.24,
       "driftRate": 0.24,
       "laneIds": [
         "LN-024",
@@ -166,7 +166,7 @@
       "name": "Redwood Lines Spedition",
       "scac": "LUGS",
       "status": "active",
-      "legitimacyScore": 86,
+      "legitimacyScore": 85.37,
       "driftRate": -0.13,
       "laneIds": [
         "LN-008",
@@ -180,7 +180,7 @@
       "name": "Continental Trucking Spedition",
       "scac": "QITK",
       "status": "active",
-      "legitimacyScore": 90.94,
+      "legitimacyScore": 90.9,
       "driftRate": 0.1,
       "laneIds": [
         "LN-007",
@@ -194,7 +194,7 @@
       "name": "Vanguard Trucking Inc",
       "scac": "KVVR",
       "status": "active",
-      "legitimacyScore": 83.46,
+      "legitimacyScore": 83.81,
       "driftRate": -0.03,
       "laneIds": [
         "LN-024",
@@ -207,7 +207,7 @@
       "name": "Crown Transport BV",
       "scac": "TKXU",
       "status": "active",
-      "legitimacyScore": 93.38,
+      "legitimacyScore": 93.47,
       "driftRate": -0.12,
       "laneIds": [
         "LN-002"
@@ -233,7 +233,7 @@
       "name": "Amber Trucking Co",
       "scac": "DSES",
       "status": "active",
-      "legitimacyScore": 97.86,
+      "legitimacyScore": 97.97,
       "driftRate": 0.09,
       "laneIds": [
         "LN-023",
@@ -246,7 +246,7 @@
       "name": "Coastal Lines AG",
       "scac": "OOKU",
       "status": "active",
-      "legitimacyScore": 18.21,
+      "legitimacyScore": 17.25,
       "driftRate": -0.67,
       "laneIds": [
         "LN-018",
@@ -260,7 +260,7 @@
       "name": "Highline Freight Ltd",
       "scac": "GREM",
       "status": "active",
-      "legitimacyScore": 82.2,
+      "legitimacyScore": 82.46,
       "driftRate": -0.09,
       "laneIds": [
         "LN-022"
@@ -272,7 +272,7 @@
       "name": "Falcon Transport Ltd",
       "scac": "YXJN",
       "status": "active",
-      "legitimacyScore": 99.16,
+      "legitimacyScore": 98.78,
       "driftRate": 0.04,
       "laneIds": [
         "LN-009"
@@ -284,7 +284,7 @@
       "name": "Redwood Shipping Spedition",
       "scac": "BURG",
       "status": "active",
-      "legitimacyScore": 88.22,
+      "legitimacyScore": 87.59,
       "driftRate": -0.09,
       "laneIds": [
         "LN-010",
@@ -298,7 +298,7 @@
       "name": "Meridian Lines GmbH",
       "scac": "ZAOE",
       "status": "active",
-      "legitimacyScore": 78.4,
+      "legitimacyScore": 77.86,
       "driftRate": 0.04,
       "laneIds": [
         "LN-009",
@@ -311,7 +311,7 @@
       "name": "Highline Logistics SA",
       "scac": "WCZB",
       "status": "active",
-      "legitimacyScore": 94.28,
+      "legitimacyScore": 93.94,
       "driftRate": 0,
       "laneIds": [
         "LN-010"
@@ -323,7 +323,7 @@
       "name": "Redwood Carriers GmbH",
       "scac": "AOFH",
       "status": "active",
-      "legitimacyScore": 40.83,
+      "legitimacyScore": 39.93,
       "driftRate": -0.34,
       "laneIds": [
         "LN-007"
@@ -335,7 +335,7 @@
       "name": "Falcon Logistics GmbH",
       "scac": "RERE",
       "status": "active",
-      "legitimacyScore": 85.88,
+      "legitimacyScore": 85.4,
       "driftRate": -0.02,
       "laneIds": [
         "LN-006",
@@ -349,7 +349,7 @@
       "name": "Atlantic Freight Inc",
       "scac": "TGXH",
       "status": "active",
-      "legitimacyScore": 83.57,
+      "legitimacyScore": 83.87,
       "driftRate": 0.14,
       "laneIds": [
         "LN-002"
@@ -361,7 +361,7 @@
       "name": "Hazel Transport BV",
       "scac": "OTGC",
       "status": "active",
-      "legitimacyScore": 95.93,
+      "legitimacyScore": 95.67,
       "driftRate": 0.04,
       "laneIds": [
         "LN-023",
@@ -375,7 +375,7 @@
       "name": "Continental Logistics Inc",
       "scac": "CPOR",
       "status": "active",
-      "legitimacyScore": 72,
+      "legitimacyScore": 71.65,
       "driftRate": -0.06,
       "laneIds": [
         "LN-024"
@@ -387,7 +387,7 @@
       "name": "Harbor Lines SA",
       "scac": "HGFN",
       "status": "active",
-      "legitimacyScore": 64.69,
+      "legitimacyScore": 64.12,
       "driftRate": -0.13,
       "laneIds": [
         "LN-013"
@@ -399,7 +399,7 @@
       "name": "Union Carriers Ltd",
       "scac": "DOZE",
       "status": "active",
-      "legitimacyScore": 80.08,
+      "legitimacyScore": 80.14,
       "driftRate": -0.1,
       "laneIds": [
         "LN-019",
@@ -412,7 +412,7 @@
       "name": "Cobalt Logistics SA",
       "scac": "EGVI",
       "status": "active",
-      "legitimacyScore": 91.02,
+      "legitimacyScore": 90.6,
       "driftRate": -0.07,
       "laneIds": [
         "LN-022",
@@ -426,7 +426,7 @@
       "name": "Pioneer Shipping AG",
       "scac": "JNFH",
       "status": "active",
-      "legitimacyScore": 91.73,
+      "legitimacyScore": 91.94,
       "driftRate": 0.19,
       "laneIds": [
         "LN-019",
@@ -440,7 +440,7 @@
       "name": "Silver Logistics Ltd",
       "scac": "PLFU",
       "status": "active",
-      "legitimacyScore": 99.95,
+      "legitimacyScore": 99.56,
       "driftRate": 0.21,
       "laneIds": [
         "LN-016",
@@ -454,7 +454,7 @@
       "name": "Northern Trucking Inc",
       "scac": "NPWL",
       "status": "active",
-      "legitimacyScore": 98.35,
+      "legitimacyScore": 98.64,
       "driftRate": 0.15,
       "laneIds": [
         "LN-018"
@@ -466,7 +466,7 @@
       "name": "Cascade Logistics BV",
       "scac": "ARUW",
       "status": "active",
-      "legitimacyScore": 89.54,
+      "legitimacyScore": 89.69,
       "driftRate": -0.1,
       "laneIds": [
         "LN-010"
@@ -491,7 +491,7 @@
       "name": "Ember Shipping Ltd",
       "scac": "QXGS",
       "status": "active",
-      "legitimacyScore": 40.04,
+      "legitimacyScore": 40.18,
       "driftRate": -0.3,
       "laneIds": [
         "LN-019",
@@ -504,7 +504,7 @@
       "name": "Vanguard Trucking SA",
       "scac": "PMRX",
       "status": "active",
-      "legitimacyScore": 97.13,
+      "legitimacyScore": 97.57,
       "driftRate": 0.11,
       "laneIds": [
         "LN-003"
@@ -516,7 +516,7 @@
       "name": "Cobalt Trucking GmbH",
       "scac": "EIMN",
       "status": "active",
-      "legitimacyScore": 84.34,
+      "legitimacyScore": 84.67,
       "driftRate": 0.03,
       "laneIds": [
         "LN-023",
@@ -529,7 +529,7 @@
       "name": "Vanguard Carriers Inc",
       "scac": "SLRZ",
       "status": "active",
-      "legitimacyScore": 96.11,
+      "legitimacyScore": 96.36,
       "driftRate": -0.01,
       "laneIds": [
         "LN-006",
@@ -542,7 +542,7 @@
       "name": "Union Cargo Ltd",
       "scac": "BPXF",
       "status": "active",
-      "legitimacyScore": 82.89,
+      "legitimacyScore": 83.01,
       "driftRate": 0.17,
       "laneIds": [
         "LN-013",
@@ -555,7 +555,7 @@
       "name": "Continental Lines AG",
       "scac": "ZXQJ",
       "status": "active",
-      "legitimacyScore": 70.71,
+      "legitimacyScore": 70.78,
       "driftRate": -0.11,
       "laneIds": [
         "LN-001",
@@ -569,7 +569,7 @@
       "name": "Prairie Transport Inc",
       "scac": "HFGG",
       "status": "active",
-      "legitimacyScore": 97.74,
+      "legitimacyScore": 97.5,
       "driftRate": 0.17,
       "laneIds": [
         "LN-023"
@@ -581,7 +581,7 @@
       "name": "Meridian Carriers Co",
       "scac": "CYSF",
       "status": "active",
-      "legitimacyScore": 78.98,
+      "legitimacyScore": 78.69,
       "driftRate": 0.1,
       "laneIds": [
         "LN-005",
@@ -595,7 +595,7 @@
       "name": "Prairie Haulage Co",
       "scac": "ZNTX",
       "status": "active",
-      "legitimacyScore": 75.14,
+      "legitimacyScore": 75.64,
       "driftRate": -0.01,
       "laneIds": [
         "LN-017",
@@ -609,7 +609,7 @@
       "name": "Copper Haulage Spedition",
       "scac": "KCJU",
       "status": "active",
-      "legitimacyScore": 99.94,
+      "legitimacyScore": 99.97,
       "driftRate": 0.12,
       "laneIds": [
         "LN-016"
@@ -621,7 +621,7 @@
       "name": "Redwood Express Spedition",
       "scac": "CKES",
       "status": "active",
-      "legitimacyScore": 85.27,
+      "legitimacyScore": 84.79,
       "driftRate": -0.13,
       "laneIds": [
         "LN-019",
@@ -634,7 +634,7 @@
       "name": "Northern Haulage SA",
       "scac": "SJMJ",
       "status": "active",
-      "legitimacyScore": 69.33,
+      "legitimacyScore": 69.17,
       "driftRate": -0.02,
       "laneIds": [
         "LN-020"
@@ -646,7 +646,7 @@
       "name": "Union Transport Spedition",
       "scac": "HHDH",
       "status": "active",
-      "legitimacyScore": 75.34,
+      "legitimacyScore": 75.08,
       "driftRate": 0.02,
       "laneIds": [
         "LN-022",
@@ -659,7 +659,7 @@
       "name": "Highline Transport GmbH",
       "scac": "XBCE",
       "status": "active",
-      "legitimacyScore": 93.59,
+      "legitimacyScore": 93.1,
       "driftRate": 0.09,
       "laneIds": [
         "LN-008"
@@ -671,7 +671,7 @@
       "name": "Continental Shipping AG",
       "scac": "RWMY",
       "status": "active",
-      "legitimacyScore": 89.07,
+      "legitimacyScore": 89.62,
       "driftRate": 0.18,
       "laneIds": [
         "LN-011",
@@ -684,7 +684,7 @@
       "name": "Ember Cargo SA",
       "scac": "ZXJT",
       "status": "active",
-      "legitimacyScore": 89.16,
+      "legitimacyScore": 88.86,
       "driftRate": -0.11,
       "laneIds": [
         "LN-015",
@@ -697,7 +697,7 @@
       "name": "Windward Logistics GmbH",
       "scac": "GKDD",
       "status": "active",
-      "legitimacyScore": 99.79,
+      "legitimacyScore": 99.87,
       "driftRate": 0.09,
       "laneIds": [
         "LN-009",
@@ -710,7 +710,7 @@
       "name": "Anchor Trucking Co",
       "scac": "FTKT",
       "status": "active",
-      "legitimacyScore": 92.81,
+      "legitimacyScore": 92.94,
       "driftRate": -0.04,
       "laneIds": [
         "LN-013"
@@ -722,7 +722,7 @@
       "name": "Coastal Transport GmbH",
       "scac": "IUUC",
       "status": "active",
-      "legitimacyScore": 83.12,
+      "legitimacyScore": 82.53,
       "driftRate": -0.13,
       "laneIds": [
         "LN-004"
@@ -734,7 +734,7 @@
       "name": "Redwood Transport Ltd",
       "scac": "YMNZ",
       "status": "active",
-      "legitimacyScore": 71.25,
+      "legitimacyScore": 71.15,
       "driftRate": 0.04,
       "laneIds": [
         "LN-015"
@@ -746,7 +746,7 @@
       "name": "Meridian Express GmbH",
       "scac": "FAWX",
       "status": "active",
-      "legitimacyScore": 84.19,
+      "legitimacyScore": 84.05,
       "driftRate": 0.07,
       "laneIds": [
         "LN-023",
@@ -759,7 +759,7 @@
       "name": "Northern Freight BV",
       "scac": "URWB",
       "status": "active",
-      "legitimacyScore": 69.15,
+      "legitimacyScore": 69.14,
       "driftRate": -0.09,
       "laneIds": [
         "LN-007"
@@ -771,7 +771,7 @@
       "name": "Silver Shipping GmbH",
       "scac": "KNLU",
       "status": "active",
-      "legitimacyScore": 86.46,
+      "legitimacyScore": 85.93,
       "driftRate": -0.02,
       "laneIds": [
         "LN-017"
@@ -783,7 +783,7 @@
       "name": "Ridgeline Trucking Co",
       "scac": "HWAI",
       "status": "active",
-      "legitimacyScore": 94.2,
+      "legitimacyScore": 94.43,
       "driftRate": 0.08,
       "laneIds": [
         "LN-022"
@@ -795,7 +795,7 @@
       "name": "Crown Express Spedition",
       "scac": "UDKJ",
       "status": "active",
-      "legitimacyScore": 90.72,
+      "legitimacyScore": 90.7,
       "driftRate": 0.24,
       "laneIds": [
         "LN-003",
@@ -808,7 +808,7 @@
       "name": "Silver Trucking Ltd",
       "scac": "BUAP",
       "status": "active",
-      "legitimacyScore": 46.01,
+      "legitimacyScore": 45.75,
       "driftRate": -0.27,
       "laneIds": [
         "LN-004"
@@ -820,7 +820,7 @@
       "name": "Windward Haulage GmbH",
       "scac": "TIXY",
       "status": "active",
-      "legitimacyScore": 89.46,
+      "legitimacyScore": 90.06,
       "driftRate": 0.05,
       "laneIds": [
         "LN-009",
@@ -834,7 +834,7 @@
       "name": "Cascade Shipping Co",
       "scac": "EHOV",
       "status": "active",
-      "legitimacyScore": 73.73,
+      "legitimacyScore": 74.21,
       "driftRate": 0.1,
       "laneIds": [
         "LN-005",
@@ -848,7 +848,7 @@
       "name": "Cobalt Transport Spedition",
       "scac": "QPAN",
       "status": "active",
-      "legitimacyScore": 42.07,
+      "legitimacyScore": 41.55,
       "driftRate": -0.23,
       "laneIds": [
         "LN-011"
@@ -860,7 +860,7 @@
       "name": "Cobalt Carriers BV",
       "scac": "HVNZ",
       "status": "active",
-      "legitimacyScore": 86.61,
+      "legitimacyScore": 86.4,
       "driftRate": 0.25,
       "laneIds": [
         "LN-009"
@@ -872,7 +872,7 @@
       "name": "Cobalt Transport Inc",
       "scac": "ZIQV",
       "status": "active",
-      "legitimacyScore": 98.54,
+      "legitimacyScore": 98.77,
       "driftRate": 0.15,
       "laneIds": [
         "LN-018",
@@ -886,7 +886,7 @@
       "name": "Granite Carriers BV",
       "scac": "IBQY",
       "status": "active",
-      "legitimacyScore": 87.02,
+      "legitimacyScore": 87.34,
       "driftRate": 0.15,
       "laneIds": [
         "LN-004"
@@ -898,7 +898,7 @@
       "name": "Union Freight Inc",
       "scac": "HVZF",
       "status": "active",
-      "legitimacyScore": 68.11,
+      "legitimacyScore": 67.38,
       "driftRate": -0.13,
       "laneIds": [
         "LN-019",
@@ -912,7 +912,7 @@
       "name": "Iron Trucking GmbH",
       "scac": "HTFB",
       "status": "active",
-      "legitimacyScore": 99.47,
+      "legitimacyScore": 99.63,
       "driftRate": 0.24,
       "laneIds": [
         "LN-009"
@@ -924,7 +924,7 @@
       "name": "Ridgeline Lines Co",
       "scac": "XPWT",
       "status": "active",
-      "legitimacyScore": 99.25,
+      "legitimacyScore": 99.6,
       "driftRate": 0.22,
       "laneIds": [
         "LN-015",
@@ -937,7 +937,7 @@
       "name": "Redwood Trucking GmbH",
       "scac": "JQNR",
       "status": "active",
-      "legitimacyScore": 98.98,
+      "legitimacyScore": 99.2,
       "driftRate": 0.12,
       "laneIds": [
         "LN-023",
@@ -951,7 +951,7 @@
       "name": "Silver Carriers Co",
       "scac": "BXSN",
       "status": "active",
-      "legitimacyScore": 78.07,
+      "legitimacyScore": 77.98,
       "driftRate": -0.03,
       "laneIds": [
         "LN-021",
@@ -964,7 +964,7 @@
       "name": "Windward Shipping Inc",
       "scac": "KKLJ",
       "status": "active",
-      "legitimacyScore": 100,
+      "legitimacyScore": 99.67,
       "driftRate": 0.21,
       "laneIds": [
         "LN-023"
@@ -990,7 +990,7 @@
       "name": "Falcon Trucking Co",
       "scac": "VHJN",
       "status": "active",
-      "legitimacyScore": 74.76,
+      "legitimacyScore": 75.15,
       "driftRate": -0.07,
       "laneIds": [
         "LN-019",
@@ -1003,7 +1003,7 @@
       "name": "Summit Cargo Inc",
       "scac": "IHLS",
       "status": "active",
-      "legitimacyScore": 75.1,
+      "legitimacyScore": 75.5,
       "driftRate": 0.07,
       "laneIds": [
         "LN-024",
@@ -1016,7 +1016,7 @@
       "name": "Vanguard Logistics Ltd",
       "scac": "LNDN",
       "status": "active",
-      "legitimacyScore": 75.11,
+      "legitimacyScore": 75.69,
       "driftRate": 0.04,
       "laneIds": [
         "LN-013",
@@ -1029,7 +1029,7 @@
       "name": "Highline Trucking Spedition",
       "scac": "OIAV",
       "status": "active",
-      "legitimacyScore": 99.66,
+      "legitimacyScore": 99.34,
       "driftRate": 0.19,
       "laneIds": [
         "LN-002",
@@ -1042,7 +1042,7 @@
       "name": "Iron Freight GmbH",
       "scac": "NUDC",
       "status": "active",
-      "legitimacyScore": 36.56,
+      "legitimacyScore": 36.73,
       "driftRate": -0.39,
       "laneIds": [
         "LN-021",
@@ -1056,7 +1056,7 @@
       "name": "Harbor Transport AG",
       "scac": "LEIL",
       "status": "active",
-      "legitimacyScore": 92.82,
+      "legitimacyScore": 93.42,
       "driftRate": 0.03,
       "laneIds": [
         "LN-014"
@@ -1068,7 +1068,7 @@
       "name": "Northern Logistics SA",
       "scac": "IOHB",
       "status": "active",
-      "legitimacyScore": 78.65,
+      "legitimacyScore": 78.08,
       "driftRate": -0.02,
       "laneIds": [
         "LN-002"
@@ -1080,7 +1080,7 @@
       "name": "Pioneer Express Inc",
       "scac": "XUWM",
       "status": "active",
-      "legitimacyScore": 86.61,
+      "legitimacyScore": 86.76,
       "driftRate": 0.1,
       "laneIds": [
         "LN-003",
@@ -1094,7 +1094,7 @@
       "name": "Summit Shipping AG",
       "scac": "GHEH",
       "status": "active",
-      "legitimacyScore": 76.43,
+      "legitimacyScore": 76.21,
       "driftRate": -0.07,
       "laneIds": [
         "LN-014"
@@ -1106,7 +1106,7 @@
       "name": "Vanguard Trucking AG",
       "scac": "ZEJJ",
       "status": "active",
-      "legitimacyScore": 70.67,
+      "legitimacyScore": 70.88,
       "driftRate": -0.07,
       "laneIds": [
         "LN-015"
@@ -1118,7 +1118,7 @@
       "name": "Falcon Transport Inc",
       "scac": "HTWS",
       "status": "active",
-      "legitimacyScore": 98.84,
+      "legitimacyScore": 98.92,
       "driftRate": 0.11,
       "laneIds": [
         "LN-001",
@@ -1146,7 +1146,7 @@
       "name": "Highline Logistics AG",
       "scac": "WWRF",
       "status": "active",
-      "legitimacyScore": 100,
+      "legitimacyScore": 99.91,
       "driftRate": 0.23,
       "laneIds": [
         "LN-006",
@@ -1160,7 +1160,7 @@
       "name": "Redwood Lines BV",
       "scac": "NQYU",
       "status": "active",
-      "legitimacyScore": 99.33,
+      "legitimacyScore": 99.51,
       "driftRate": 0.13,
       "laneIds": [
         "LN-001"
@@ -1172,7 +1172,7 @@
       "name": "Vanguard Trucking GmbH",
       "scac": "KSFK",
       "status": "active",
-      "legitimacyScore": 73.69,
+      "legitimacyScore": 74.25,
       "driftRate": -0.03,
       "laneIds": [
         "LN-010",
@@ -1186,7 +1186,7 @@
       "name": "Silver Shipping AG",
       "scac": "GIYE",
       "status": "active",
-      "legitimacyScore": 97.79,
+      "legitimacyScore": 98.02,
       "driftRate": 0.21,
       "laneIds": [
         "LN-008",
@@ -1200,7 +1200,7 @@
       "name": "Granite Transport Inc",
       "scac": "XFGQ",
       "status": "active",
-      "legitimacyScore": 84.44,
+      "legitimacyScore": 84.02,
       "driftRate": 0.01,
       "laneIds": [
         "LN-013",
@@ -1213,7 +1213,7 @@
       "name": "Hazel Logistics BV",
       "scac": "RDLR",
       "status": "active",
-      "legitimacyScore": 72.55,
+      "legitimacyScore": 72.61,
       "driftRate": -0.14,
       "laneIds": [
         "LN-001",
@@ -1227,7 +1227,7 @@
       "name": "Cobalt Logistics Ltd",
       "scac": "THKA",
       "status": "active",
-      "legitimacyScore": 80.96,
+      "legitimacyScore": 81.4,
       "driftRate": 0.02,
       "laneIds": [
         "LN-008"
@@ -1239,7 +1239,7 @@
       "name": "Highline Haulage SA",
       "scac": "FBBG",
       "status": "active",
-      "legitimacyScore": 69.64,
+      "legitimacyScore": 69.39,
       "driftRate": 0,
       "laneIds": [
         "LN-020"
@@ -1251,7 +1251,7 @@
       "name": "Meridian Shipping Spedition",
       "scac": "SROK",
       "status": "active",
-      "legitimacyScore": 99.27,
+      "legitimacyScore": 99.24,
       "driftRate": 0.22,
       "laneIds": [
         "LN-017",
@@ -1292,7 +1292,7 @@
       "name": "Windward Transport Ltd",
       "scac": "VXED",
       "status": "active",
-      "legitimacyScore": 83.03,
+      "legitimacyScore": 83.28,
       "driftRate": -0.11,
       "laneIds": [
         "LN-004"
@@ -1304,7 +1304,7 @@
       "name": "Summit Freight Ltd",
       "scac": "WEZU",
       "status": "active",
-      "legitimacyScore": 92.05,
+      "legitimacyScore": 91.69,
       "driftRate": 0.01,
       "laneIds": [
         "LN-002"
@@ -1316,7 +1316,7 @@
       "name": "Harbor Haulage Spedition",
       "scac": "GWVZ",
       "status": "active",
-      "legitimacyScore": 77.88,
+      "legitimacyScore": 78.11,
       "driftRate": -0.07,
       "laneIds": [
         "LN-016"
@@ -1328,7 +1328,7 @@
       "name": "Silver Lines SA",
       "scac": "QSEB",
       "status": "active",
-      "legitimacyScore": 90.97,
+      "legitimacyScore": 91.05,
       "driftRate": 0,
       "laneIds": [
         "LN-008",
@@ -1341,7 +1341,7 @@
       "name": "Northern Freight Inc",
       "scac": "CDHX",
       "status": "active",
-      "legitimacyScore": 39.85,
+      "legitimacyScore": 40.01,
       "driftRate": -0.26,
       "laneIds": [
         "LN-021"
@@ -1353,7 +1353,7 @@
       "name": "Northern Freight SA",
       "scac": "QPXP",
       "status": "active",
-      "legitimacyScore": 96.09,
+      "legitimacyScore": 96.5,
       "driftRate": 0.21,
       "laneIds": [
         "LN-005"
@@ -1365,7 +1365,7 @@
       "name": "Crown Express Co",
       "scac": "GXLF",
       "status": "active",
-      "legitimacyScore": 92.48,
+      "legitimacyScore": 92.28,
       "driftRate": 0.06,
       "laneIds": [
         "LN-010"
@@ -1377,7 +1377,7 @@
       "name": "Prairie Freight Co",
       "scac": "IQPU",
       "status": "active",
-      "legitimacyScore": 80.79,
+      "legitimacyScore": 80.29,
       "driftRate": 0,
       "laneIds": [
         "LN-010"
@@ -1389,7 +1389,7 @@
       "name": "Hazel Express AG",
       "scac": "YPUJ",
       "status": "active",
-      "legitimacyScore": 96.91,
+      "legitimacyScore": 96.94,
       "driftRate": 0.08,
       "laneIds": [
         "LN-024",
@@ -1403,7 +1403,7 @@
       "name": "Crown Carriers GmbH",
       "scac": "OAAS",
       "status": "active",
-      "legitimacyScore": 40.01,
+      "legitimacyScore": 39.65,
       "driftRate": -0.1,
       "laneIds": [
         "LN-018"
@@ -1415,7 +1415,7 @@
       "name": "Silver Haulage GmbH",
       "scac": "MSAP",
       "status": "active",
-      "legitimacyScore": 85.38,
+      "legitimacyScore": 85.37,
       "driftRate": 0.24,
       "laneIds": [
         "LN-018"
@@ -1427,7 +1427,7 @@
       "name": "Pioneer Express SA",
       "scac": "OGGD",
       "status": "active",
-      "legitimacyScore": 65.91,
+      "legitimacyScore": 65.52,
       "driftRate": -0.12,
       "laneIds": [
         "LN-005"
@@ -1439,7 +1439,7 @@
       "name": "Meridian Lines Ltd",
       "scac": "QQFG",
       "status": "active",
-      "legitimacyScore": 95.34,
+      "legitimacyScore": 95.99,
       "driftRate": 0.15,
       "laneIds": [
         "LN-005"
@@ -1451,7 +1451,7 @@
       "name": "Ember Transport Ltd",
       "scac": "SSNY",
       "status": "active",
-      "legitimacyScore": 83.19,
+      "legitimacyScore": 82.96,
       "driftRate": 0.06,
       "laneIds": [
         "LN-001",
@@ -1465,7 +1465,7 @@
       "name": "Windward Trucking SA",
       "scac": "MOYD",
       "status": "active",
-      "legitimacyScore": 97.78,
+      "legitimacyScore": 97.94,
       "driftRate": 0.13,
       "laneIds": [
         "LN-001"
@@ -1477,7 +1477,7 @@
       "name": "Coastal Logistics GmbH",
       "scac": "UUNX",
       "status": "active",
-      "legitimacyScore": 79.26,
+      "legitimacyScore": 79.9,
       "driftRate": 0.07,
       "laneIds": [
         "LN-011",
@@ -1491,7 +1491,7 @@
       "name": "Crown Logistics Spedition",
       "scac": "YTFQ",
       "status": "active",
-      "legitimacyScore": 38.76,
+      "legitimacyScore": 38.17,
       "driftRate": -0.41,
       "laneIds": [
         "LN-010",
@@ -1504,7 +1504,7 @@
       "name": "Windward Haulage AG",
       "scac": "OAKP",
       "status": "active",
-      "legitimacyScore": 80,
+      "legitimacyScore": 80.26,
       "driftRate": 0.07,
       "laneIds": [
         "LN-006"
@@ -1516,7 +1516,7 @@
       "name": "Pioneer Carriers Ltd",
       "scac": "PHYZ",
       "status": "active",
-      "legitimacyScore": 74.06,
+      "legitimacyScore": 74.02,
       "driftRate": -0.09,
       "laneIds": [
         "LN-022",
@@ -1529,7 +1529,7 @@
       "name": "Northern Trucking SA",
       "scac": "FQYJ",
       "status": "active",
-      "legitimacyScore": 83.4,
+      "legitimacyScore": 83.97,
       "driftRate": -0.01,
       "laneIds": [
         "LN-020",
@@ -1543,7 +1543,7 @@
       "name": "Vanguard Express SA",
       "scac": "PAPY",
       "status": "active",
-      "legitimacyScore": 94.68,
+      "legitimacyScore": 94.72,
       "driftRate": 0,
       "laneIds": [
         "LN-018"
@@ -1722,48 +1722,8 @@
     }
   ],
   "relationships": [],
-  "todaysIncidents": [
-    {
-      "id": "INC-59-1",
-      "day": 59,
-      "kind": "anomaly",
-      "severity": "low",
-      "carrierIds": [
-        "CAR-0092"
-      ],
-      "laneId": "LN-008",
-      "groundTruthFraud": false,
-      "causalTrace": [
-        "Carrier CAR-0092 legitimacy 97.8 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-008 tripped a detection rule with no corroborating signal."
-      ]
-    }
-  ],
-  "todaysVerdicts": [
-    {
-      "event": {
-        "id": "INC-59-1",
-        "day": 59,
-        "kind": "anomaly",
-        "severity": "low",
-        "carrierIds": [
-          "CAR-0092"
-        ],
-        "laneId": "LN-008",
-        "groundTruthFraud": false,
-        "causalTrace": [
-          "Carrier CAR-0092 legitimacy 97.8 is well above the corruption threshold.",
-          "A one-off operational anomaly on lane LN-008 tripped a detection rule with no corroborating signal."
-        ]
-      },
-      "verdict": {
-        "eventId": "INC-59-1",
-        "decision": "clear",
-        "confidence": 0.94,
-        "reasoning": "CAR-0092 shows an average legitimacy signal of 97.8 on a low severity flag. Recommending clear."
-      }
-    }
-  ],
+  "todaysIncidents": [],
+  "todaysVerdicts": [],
   "leaderboard": [
     {
       "day": 1,
