@@ -1,27 +1,27 @@
 window.SHADOW_DATA = {
-  "day": 65,
-  "generatedAt": "2026-11-25T13:10:06.233Z",
+  "day": 66,
+  "generatedAt": "2026-11-26T12:49:54.666Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
-    "activeCarriers": 116,
-    "exitedCarriers": 4,
+    "activeCarriers": 115,
+    "exitedCarriers": 5,
     "avgLegitimacy": 79.1,
     "corruptCount": 7,
     "corruptionThreshold": 35,
     "totalLanes": 24,
     "totalRelationships": 0,
-    "totalReviewed": 27,
-    "cumulativeWinRatePct": 96.3
+    "totalReviewed": 29,
+    "cumulativeWinRatePct": 96.6
   },
   "legitimacyHistogram": [
     {
       "bucket": "0-9",
-      "count": 5
+      "count": 6
     },
     {
       "bucket": "10-19",
-      "count": 1
+      "count": 0
     },
     {
       "bucket": "20-29",
@@ -29,11 +29,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "30-39",
-      "count": 6
+      "count": 7
     },
     {
       "bucket": "40-49",
-      "count": 2
+      "count": 1
     },
     {
       "bucket": "50-59",
@@ -45,11 +45,11 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "70-79",
-      "count": 27
+      "count": 26
     },
     {
       "bucket": "80-89",
-      "count": 25
+      "count": 26
     },
     {
       "bucket": "90-100",
@@ -276,6 +276,16 @@ window.SHADOW_DATA = {
       "totalReviewed": 27,
       "cumulativeWins": 26,
       "winRatePct": 96.3
+    },
+    {
+      "day": 66,
+      "catches": 0,
+      "misses": 0,
+      "falsePositives": 0,
+      "correctClears": 2,
+      "totalReviewed": 29,
+      "cumulativeWins": 28,
+      "winRatePct": 96.6
     }
   ],
   "lanes": [
@@ -474,60 +484,60 @@ window.SHADOW_DATA = {
   ],
   "incidents": [
     {
-      "id": "INC-65-1",
-      "day": 65,
+      "id": "INC-66-1",
+      "day": 66,
       "kind": "anomaly",
       "severity": "low",
       "carrierIds": [
-        "CAR-0055"
+        "CAR-0068"
       ],
-      "laneId": "LN-013",
+      "laneId": "LN-018",
       "groundTruthFraud": false,
       "causalTrace": [
-        "Carrier CAR-0055 legitimacy 92.8 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-013 tripped a detection rule with no corroborating signal."
+        "Carrier CAR-0068 legitimacy 100.0 is well above the corruption threshold.",
+        "A one-off operational anomaly on lane LN-018 tripped a detection rule with no corroborating signal."
       ],
       "groundTruthLabel": "benign"
     },
     {
-      "id": "INC-65-2",
-      "day": 65,
+      "id": "INC-66-2",
+      "day": 66,
       "kind": "anomaly",
       "severity": "low",
       "carrierIds": [
-        "CAR-0078"
+        "CAR-0112"
       ],
-      "laneId": "LN-024",
+      "laneId": "LN-005",
       "groundTruthFraud": false,
       "causalTrace": [
-        "Carrier CAR-0078 legitimacy 76.3 is well above the corruption threshold.",
-        "A one-off operational anomaly on lane LN-024 tripped a detection rule with no corroborating signal."
+        "Carrier CAR-0112 legitimacy 95.6 is well above the corruption threshold.",
+        "A one-off operational anomaly on lane LN-005 tripped a detection rule with no corroborating signal."
       ],
       "groundTruthLabel": "benign"
     }
   ],
   "verdicts": [
     {
-      "eventId": "INC-65-1",
+      "eventId": "INC-66-1",
       "decision": "clear",
-      "confidence": 0.92,
-      "reasoning": "CAR-0055 shows an average legitimacy signal of 92.8 on a low severity flag. Recommending clear.",
+      "confidence": 0.95,
+      "reasoning": "CAR-0068 shows an average legitimacy signal of 100.0 on a low severity flag. Recommending clear.",
       "outcome": "correct_clear"
     },
     {
-      "eventId": "INC-65-2",
+      "eventId": "INC-66-2",
       "decision": "clear",
-      "confidence": 0.87,
-      "reasoning": "CAR-0078 shows an average legitimacy signal of 76.3 on a low severity flag. Recommending clear.",
+      "confidence": 0.93,
+      "reasoning": "CAR-0112 shows an average legitimacy signal of 95.6 on a low severity flag. Recommending clear.",
       "outcome": "correct_clear"
     }
   ],
   "reportText": [
-    "Day 65 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-25T13:10:06.233Z.",
-    "120 carriers (116 active, 4 exited) across 24 lanes. Average legitimacy score 79.1.",
+    "Day 66 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-26T12:49:54.666Z.",
+    "120 carriers (115 active, 5 exited) across 24 lanes. Average legitimacy score 79.1.",
     "7 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
     "2 new flagged event(s) today: 0 fraud pattern(s), 2 benign anomaly/anomalies.",
-    "Across 27 reviewed event(s) since genesis, the AI council's cumulative win rate is 96.3%.",
+    "Across 29 reviewed event(s) since genesis, the AI council's cumulative win rate is 96.6%.",
     "No collusion relationships have formed between carriers yet."
   ]
 };
