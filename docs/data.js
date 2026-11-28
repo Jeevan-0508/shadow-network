@@ -1,6 +1,6 @@
 window.SHADOW_DATA = {
-  "day": 67,
-  "generatedAt": "2026-11-27T12:42:56.613Z",
+  "day": 68,
+  "generatedAt": "2026-11-28T11:58:02.878Z",
   "seed": "shadow-network-genesis",
   "stats": {
     "totalCarriers": 120,
@@ -11,8 +11,8 @@ window.SHADOW_DATA = {
     "corruptionThreshold": 35,
     "totalLanes": 24,
     "totalRelationships": 0,
-    "totalReviewed": 29,
-    "cumulativeWinRatePct": 96.6
+    "totalReviewed": 30,
+    "cumulativeWinRatePct": 96.7
   },
   "legitimacyHistogram": [
     {
@@ -41,15 +41,15 @@ window.SHADOW_DATA = {
     },
     {
       "bucket": "60-69",
-      "count": 6
+      "count": 8
     },
     {
       "bucket": "70-79",
-      "count": 26
+      "count": 25
     },
     {
       "bucket": "80-89",
-      "count": 27
+      "count": 26
     },
     {
       "bucket": "90-100",
@@ -286,6 +286,16 @@ window.SHADOW_DATA = {
       "totalReviewed": 29,
       "cumulativeWins": 28,
       "winRatePct": 96.6
+    },
+    {
+      "day": 68,
+      "catches": 1,
+      "misses": 0,
+      "falsePositives": 0,
+      "correctClears": 0,
+      "totalReviewed": 30,
+      "cumulativeWins": 29,
+      "winRatePct": 96.7
     }
   ],
   "lanes": [
@@ -482,14 +492,43 @@ window.SHADOW_DATA = {
       "carrierCount": 9
     }
   ],
-  "incidents": [],
-  "verdicts": [],
+  "incidents": [
+    {
+      "id": "INC-68-1",
+      "day": 68,
+      "kind": "fraud",
+      "patternId": "FFT-006",
+      "category": "cargo_loss",
+      "severity": "high",
+      "carrierIds": [
+        "CAR-0019"
+      ],
+      "laneId": "LN-018",
+      "groundTruthFraud": true,
+      "causalTrace": [
+        "Carrier CAR-0019 legitimacy 7.0 is below the corruption threshold 35.",
+        "Lane LN-018 risk baseline 0.39 scaled the incident odds this tick.",
+        "Pattern FFT-006 (Unsecured Parking Theft, category cargo_loss) selected and fired.",
+        "Detection signal observed: Trailer door or curtain sensor triggers during a rest period"
+      ],
+      "groundTruthLabel": "fraud"
+    }
+  ],
+  "verdicts": [
+    {
+      "eventId": "INC-68-1",
+      "decision": "fraud",
+      "confidence": 0.6,
+      "reasoning": "CAR-0019 shows an average legitimacy signal of 7.0 on a high severity flag. Recommending fraud.",
+      "outcome": "catch"
+    }
+  ],
   "reportText": [
-    "Day 67 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-27T12:42:56.613Z.",
+    "Day 68 of the simulation (seed \"shadow-network-genesis\"), generated 2026-11-28T11:58:02.878Z.",
     "120 carriers (115 active, 5 exited) across 24 lanes. Average legitimacy score 79.1.",
     "7 carrier(s) have drifted below the corruption threshold (35) and are now eligible to offend.",
-    "No flagged events today. Expected in the sim's early days, before enough carriers drift corrupt.",
-    "Across 29 reviewed event(s) since genesis, the AI council's cumulative win rate is 96.6%.",
+    "1 new flagged event(s) today: 1 fraud pattern(s), 0 benign anomaly/anomalies.",
+    "Across 30 reviewed event(s) since genesis, the AI council's cumulative win rate is 96.7%.",
     "No collusion relationships have formed between carriers yet."
   ]
 };
